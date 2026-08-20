@@ -1,0 +1,39 @@
+{
+  "network": "BOT Chain Testnet",
+  "chainId": 968,
+  "rpcUrl": "https://rpc.bohr.life",
+  "explorerUrl": "https://scan.bohr.life",
+  "tradeLockEscrow": "0xaf3bE9a37Ee317A3a09Ef15981396fEc9d62eDC8",
+  "paymentToken": "0xb9a148801fe8096B113e7f1F51aC46b829CA6cc0",
+  "aiSigner": "0x34090545BD562b0bE1Cdc855F7cA9beE4566CE51",
+  "treasury": "0x34090545BD562b0bE1Cdc855F7cA9beE4566CE51",
+  "deploymentHashes": [
+    {
+      "contract": "Testnet Payment Token (tUSD)",
+      "txHash": "0xc915c880274376ea8200a5c83c8ff9175d024e9d6606859b09be7a203d0c37ac"
+    },
+    {
+      "contract": "TradeLockEscrow",
+      "txHash": "0xf0ab344dde3e983438f402488529ef55e565ae67910309c48b8216e0d29d0dfc"
+    },
+    {
+      "action": "setDisputeAdmin",
+      "txHash": "0x860a28a1139909bb09b376b0b94e0797667b0f4833d09fd21a1aff010a6eb055"
+    },
+    {
+      "action": "createAndFundOrder",
+      "txHash": "0xac018d44f6f4a27b42c6c09f4a3445f891cb9ecd15d819daa27e1a26e1a43fd8"
+    },
+    {
+      "action": "submitEvidence",
+      "txHash": "0xfc371ddd5772199e9bbb53aaee3c0c976b28ddf5cf6fb4d11799503c83516fe3"
+    },
+    {
+      "action": "approveAndReleaseWithAttestation",
+      "txHash": "0x93a97c1378343dbab4302489e63b312a33b4e459b83544036d531cd377e74815"
+    }
+  ],
+  "e2eTestOrderId": "0x544553544e45542d504f2d313738373134323539303237360000000000000000",
+  "status": "PASS",
+  "timestamp": "2026-08-19T12:30:19.490Z"
+}

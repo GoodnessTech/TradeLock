@@ -1,0 +1,18 @@
+{
+  "name": "tradelock",
+  "version": "1.0.0",
+  "description": "TradeLock: AI-Powered Onchain Trade Escrow Protocol for BOT Chain Mainnet (Chain ID 677)",
+  "scripts": {
+    "contracts:compile": "npm --prefix contracts run compile",
+    "contracts:test": "npm --prefix contracts run test",
+    "contracts:deploy": "npm --prefix contracts run deploy:botchain",
+    "server": "node server/index.js",
+    "client": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "frontend": "npm --prefix Tradelock-frontend run dev",
+    "build:frontend": "npm --prefix Tradelock-frontend run build"
+  },
+  "keywords": ["botchain", "ai", "rwa", "escrow", "oracle", "ethereum", "solidity"],
+  "author": "TradeLock Engineering Team",
+  "license": "MIT"
+}

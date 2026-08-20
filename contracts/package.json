@@ -1,0 +1,24 @@
+{
+  "name": "tradelock-contracts",
+  "version": "1.0.0",
+  "description": "TradeLock Smart Contracts for BOT Chain Mainnet (Chain ID 677)",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test test/TradeLockEscrow.test.js",
+    "validate": "node test/validateProtocol.js",
+    "deploy:botchain": "hardhat run scripts/deploy.js --network botchain"
+  },
+  "dependencies": {
+    "@nomicfoundation/edr-win32-x64-msvc": "^0.15.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "fp-ts": "^2.16.11",
+    "io-ts": "^2.2.22"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.8"
+  }
+}

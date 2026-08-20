@@ -1,0 +1,46 @@
+{
+  "network": "BOT Chain Mainnet",
+  "chainId": 677,
+  "rpcUrl": "https://rpc.botchain.ai",
+  "explorerUrl": "https://scan.botchain.ai",
+  "tradeLockEscrow": "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb",
+  "paymentToken": "0x0E965EAe12631A0826518e1811df9953355995fF",
+  "aiSigner": "0x34090545BD562b0bE1Cdc855F7cA9beE4566CE51",
+  "treasury": "0x34090545BD562b0bE1Cdc855F7cA9beE4566CE51",
+  "deploymentHashes": [
+    {
+      "contract": "Payment Token (USDt)",
+      "txHash": "0xde4726077f35f7de65dc917b003d951ddadbc706d9a8a8bd0be0f6e5beb0c52e"
+    },
+    {
+      "contract": "TradeLockEscrow",
+      "txHash": "0x749a85062c51ac9da693f65d8e1341757ec0b520756ebf33f8b3d0484c2f9ce7"
+    },
+    {
+      "action": "setDisputeAdmin",
+      "txHash": "0x3c035b231e2682ac574deae16915c752beaac2020a8ce7c83255a8195705ba23"
+    },
+    {
+      "action": "createAndFundOrder",
+      "txHash": "0x4e74ae0260eace6a3be29455e4f4d5979dcc0ad0c1dcbb5c4fd1e274430957c8"
+    },
+    {
+      "action": "submitEvidence",
+      "txHash": "0xb6f5358ff1450b10916691581f96280ae47a2f897923acd2214f69d3a0d6613c"
+    },
+    {
+      "action": "approveAndReleaseWithAttestation",
+      "txHash": "0x2df86b08abcbb4e2724fe0f0efa694034f0bc473a0a48ab3321fccc9d94cc850"
+    }
+  ],
+  "smallMainnetTransaction": {
+    "orderId": "0x4d41494e4e45542d504f2d313738373134323735333730360000000000000000",
+    "amount": "0.0001 BOT",
+    "createTx": "0x4e74ae0260eace6a3be29455e4f4d5979dcc0ad0c1dcbb5c4fd1e274430957c8",
+    "evidenceTx": "0xb6f5358ff1450b10916691581f96280ae47a2f897923acd2214f69d3a0d6613c",
+    "releaseTx": "0x2df86b08abcbb4e2724fe0f0efa694034f0bc473a0a48ab3321fccc9d94cc850",
+    "status": "RELEASED"
+  },
+  "status": "PASS",
+  "timestamp": "2026-08-19T12:33:06.572Z"
+}

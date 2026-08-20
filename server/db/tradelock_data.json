@@ -1,0 +1,1839 @@
+{
+  "users": [],
+  "orders": [
+    [
+      "0x434f434f412d3234303800000000000000000000000000000000000000000000",
+      {
+        "id": "0x434f434f412d3234303800000000000000000000000000000000000000000000",
+        "rawId": "COCOA-2408",
+        "title": "10,000 KG Organic Grade 1 Cocoa Beans",
+        "commodity": "Cocoa Beans",
+        "category": "Agricultural Commodities",
+        "amount": "18000",
+        "currency": "BOT",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "expectedQuantity": 10000,
+        "quantityUnit": "KG",
+        "buyerAddress": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "buyerName": "Demo Buyer (ChocoCraft International)",
+        "supplierAddress": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "supplierName": "Demo Supplier (Abidjan Cooperative)",
+        "originPort": "Port of Abidjan (CIABJ)",
+        "destinationPort": "Port of Hamburg (DEHAM)",
+        "incoterm": "CIF Hamburg",
+        "deliveryDeadline": "2026-09-03T00:34:12.676Z",
+        "qualityParameters": {
+          "moistureMax": 7.5,
+          "expectedGrade": "Grade 1",
+          "beanCountMin": 95
+        },
+        "status": "EVIDENCE_SUBMITTED",
+        "feeBps": 100,
+        "isDemo": true,
+        "contractAddress": "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb",
+        "chainId": 677,
+        "creationTxHash": null,
+        "fundingTxHash": null,
+        "releaseTxHash": null,
+        "createdAt": "2026-08-20T00:34:12.727Z",
+        "updatedAt": "2026-08-20T00:34:12.746Z"
+      }
+    ],
+    [
+      "0x434f464645452d32343039000000000000000000000000000000000000000000",
+      {
+        "id": "0x434f464645452d32343039000000000000000000000000000000000000000000",
+        "rawId": "COFFEE-2409",
+        "title": "20,000 KG Vietnamese Robusta Coffee Screen 18",
+        "commodity": "Green Coffee Beans",
+        "category": "Agricultural Commodities",
+        "amount": "24000",
+        "currency": "BOT",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "expectedQuantity": 20000,
+        "quantityUnit": "KG",
+        "buyerAddress": "0x90f79bf6eb2c4f870365e785982e1f101e93b906",
+        "buyerName": "Demo Buyer (Nordic Roast Co.)",
+        "supplierAddress": "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65",
+        "supplierName": "Demo Supplier (Dak Lak Exporters)",
+        "originPort": "Port of Da Nang (VNDAD)",
+        "destinationPort": "Port of Rotterdam (NLRTM)",
+        "incoterm": "CIF Rotterdam",
+        "deliveryDeadline": "2026-08-25T00:34:12.709Z",
+        "qualityParameters": {
+          "moistureMax": 12.5,
+          "expectedGrade": "Screen 18 Grade 1"
+        },
+        "status": "EVIDENCE_SUBMITTED",
+        "feeBps": 100,
+        "isDemo": true,
+        "contractAddress": "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb",
+        "chainId": 677,
+        "creationTxHash": null,
+        "fundingTxHash": null,
+        "releaseTxHash": null,
+        "createdAt": "2026-08-20T00:34:12.785Z",
+        "updatedAt": "2026-08-20T00:34:12.816Z"
+      }
+    ],
+    [
+      "0x434f505045522d32343130000000000000000000000000000000000000000000",
+      {
+        "id": "0x434f505045522d32343130000000000000000000000000000000000000000000",
+        "rawId": "COPPER-2410",
+        "title": "50,000 KG Grade A Electrolytic Copper Cathodes",
+        "commodity": "Copper Cathodes (Cu-ETP)",
+        "category": "Metals & Mining",
+        "amount": "45000",
+        "currency": "BOT",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "expectedQuantity": 50000,
+        "quantityUnit": "KG",
+        "buyerAddress": "0x9965507d1a55bcc2695c58ba16fb37d819b0a4dc",
+        "buyerName": "Demo Buyer (Apex Cable LLC)",
+        "supplierAddress": "0x976ea74026e726554db657fa54763abd0c3a0aa9",
+        "supplierName": "Demo Supplier (Pacific Minerals)",
+        "originPort": "Port of Antofagasta (CLANF)",
+        "destinationPort": "Port of Houston (USHOU)",
+        "incoterm": "FOB Antofagasta",
+        "deliveryDeadline": "2026-08-30T00:34:12.710Z",
+        "qualityParameters": {
+          "purityMin": 99.99,
+          "expectedGrade": "Grade A LME Registered"
+        },
+        "status": "EVIDENCE_SUBMITTED",
+        "feeBps": 100,
+        "isDemo": true,
+        "contractAddress": "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb",
+        "chainId": 677,
+        "creationTxHash": null,
+        "fundingTxHash": null,
+        "releaseTxHash": null,
+        "createdAt": "2026-08-20T00:34:12.845Z",
+        "updatedAt": "2026-08-20T00:34:12.895Z"
+      }
+    ],
+    [
+      "0x504f2d3137383731333936373538373100000000000000000000000000000000",
+      {
+        "id": "0x504f2d3137383731333936373538373100000000000000000000000000000000",
+        "rawId": "PO-1787139675871",
+        "title": "15 MT Tanzanian Peaberry Coffee",
+        "commodity": "Coffee Beans",
+        "category": "Agricultural Commodities",
+        "amount": "22000",
+        "currency": "BOT",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "expectedQuantity": 15,
+        "quantityUnit": "Metric Tons",
+        "buyerAddress": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "buyerName": "Test Coffee Roasters",
+        "supplierAddress": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "supplierName": "Kilimanjaro Cooperative",
+        "originPort": "Port of Dar es Salaam",
+        "destinationPort": "Port of Antwerp",
+        "incoterm": "CIF",
+        "deliveryDeadline": "2026-09-02T11:41:15.871Z",
+        "qualityParameters": {
+          "moistureMax": 11.5,
+          "expectedGrade": "Peaberry Grade 1"
+        },
+        "status": "RELEASED",
+        "feeBps": 100,
+        "isDemo": false,
+        "contractAddress": "0x7C87C29d5bB020De0faF3eb2B2B11c1A2fa07B88",
+        "chainId": 677,
+        "creationTxHash": null,
+        "fundingTxHash": null,
+        "releaseTxHash": "0x54582d544553542d313738373133393637363030340000000000000000000000",
+        "createdAt": "2026-08-19T11:41:15.871Z",
+        "updatedAt": "2026-08-19T11:41:16.014Z"
+      }
+    ],
+    [
+      "0x504f2d3137383731333937343032363200000000000000000000000000000000",
+      {
+        "id": "0x504f2d3137383731333937343032363200000000000000000000000000000000",
+        "rawId": "PO-1787139740262",
+        "title": "15 MT Tanzanian Peaberry Coffee",
+        "commodity": "Coffee Beans",
+        "category": "Agricultural Commodities",
+        "amount": "22000",
+        "currency": "BOT",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "expectedQuantity": 15,
+        "quantityUnit": "Metric Tons",
+        "buyerAddress": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "buyerName": "Test Coffee Roasters",
+        "supplierAddress": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "supplierName": "Kilimanjaro Cooperative",
+        "originPort": "Port of Dar es Salaam",
+        "destinationPort": "Port of Antwerp",
+        "incoterm": "CIF",
+        "deliveryDeadline": "2026-09-02T11:42:20.261Z",
+        "qualityParameters": {
+          "moistureMax": 11.5,
+          "expectedGrade": "Peaberry Grade 1"
+        },
+        "status": "RELEASED",
+        "feeBps": 100,
+        "isDemo": false,
+        "contractAddress": "0x7C87C29d5bB020De0faF3eb2B2B11c1A2fa07B88",
+        "chainId": 677,
+        "creationTxHash": null,
+        "fundingTxHash": null,
+        "releaseTxHash": "0x54582d544553542d313738373133393734303436350000000000000000000000",
+        "createdAt": "2026-08-19T11:42:20.262Z",
+        "updatedAt": "2026-08-19T11:42:20.479Z"
+      }
+    ],
+    [
+      "0x504f2d3137383731343239353339353800000000000000000000000000000000",
+      {
+        "id": "0x504f2d3137383731343239353339353800000000000000000000000000000000",
+        "rawId": "PO-1787142953958",
+        "title": "15 MT Tanzanian Peaberry Coffee",
+        "commodity": "Coffee Beans",
+        "category": "Agricultural Commodities",
+        "amount": "22000",
+        "currency": "BOT",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "expectedQuantity": 15,
+        "quantityUnit": "Metric Tons",
+        "buyerAddress": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "buyerName": "Test Coffee Roasters",
+        "supplierAddress": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "supplierName": "Kilimanjaro Cooperative",
+        "originPort": "Port of Dar es Salaam",
+        "destinationPort": "Port of Antwerp",
+        "incoterm": "CIF",
+        "deliveryDeadline": "2026-09-02T12:35:53.958Z",
+        "qualityParameters": {
+          "moistureMax": 11.5,
+          "expectedGrade": "Peaberry Grade 1"
+        },
+        "status": "RELEASED",
+        "feeBps": 100,
+        "isDemo": false,
+        "contractAddress": "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb",
+        "chainId": 677,
+        "creationTxHash": null,
+        "fundingTxHash": null,
+        "releaseTxHash": "0x54582d544553542d313738373134323935343134360000000000000000000000",
+        "createdAt": "2026-08-19T12:35:53.958Z",
+        "updatedAt": "2026-08-19T12:35:54.159Z"
+      }
+    ],
+    [
+      "0x504f2d3137383731383632383336353000000000000000000000000000000000",
+      {
+        "id": "0x504f2d3137383731383632383336353000000000000000000000000000000000",
+        "rawId": "PO-1787186283650",
+        "title": "15 MT Cocoa Beans",
+        "commodity": "Cocoa Beans",
+        "category": "Agriculture",
+        "amount": "25000",
+        "currency": "USDT",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "expectedQuantity": 15,
+        "quantityUnit": "TONS",
+        "buyerAddress": "0x34090545bd562b0be1cdc855f7ca9bee4566ce51",
+        "buyerName": "Buyer Corporation",
+        "supplierAddress": "0x91f3b2ac10ed4f5e6a7b8c9d0e1f2a3b4c5d6e7f",
+        "supplierName": "Supplier Exporter",
+        "originPort": "Tema Port, Ghana",
+        "destinationPort": "Rotterdam, NL",
+        "incoterm": "CIF",
+        "deliveryDeadline": "2026-08-30T00:38:01.745Z",
+        "qualityParameters": {
+          "moistureMax": 7.5,
+          "expectedGrade": "Grade 1"
+        },
+        "status": "AI_VERIFIED",
+        "feeBps": 100,
+        "isDemo": false,
+        "contractAddress": "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb",
+        "chainId": 677,
+        "creationTxHash": null,
+        "fundingTxHash": null,
+        "releaseTxHash": null,
+        "createdAt": "2026-08-20T00:38:03.650Z",
+        "updatedAt": "2026-08-20T00:38:03.771Z"
+      }
+    ]
+  ],
+  "evidence": [
+    [
+      "0x434f434f412d3234303800000000000000000000000000000000000000000000",
+      {
+        "id": "EVD-1787186052731-170",
+        "orderId": "0x434f434f412d3234303800000000000000000000000000000000000000000000",
+        "evidenceHash": "0x946afee3a76915e8614f843c51bc4e299986b9d637e262313e5b447a12299be6",
+        "ipfsUri": "ipfs://QmTradeLockEvidence1787186052746",
+        "payload": {
+          "billOfLading": {
+            "blNumber": "MSCU-ABJ-HAM-98214",
+            "carrier": "Mediterranean Shipping Company (MSC)",
+            "vesselName": "MSC Gülsün (IMO: 9839438)",
+            "containerNumber": "MSKU-948271-0",
+            "sealNumber": "CI-SEAL-88210",
+            "grossWeight": 10250,
+            "netWeight": 10000,
+            "portOfLoading": "Abidjan, Côte d'Ivoire",
+            "portOfDischarge": "Hamburg, Germany",
+            "issueDate": "2026-08-17T00:34:12.709Z",
+            "eta": "2026-08-30T00:34:12.709Z",
+            "shippedOnBoard": true
+          },
+          "commercialInvoice": {
+            "invoiceNumber": "INV-2026-COCOA-2408",
+            "quantity": 10000,
+            "unitPrice": 1.8,
+            "totalAmount": 18000,
+            "currency": "BOT",
+            "issueDate": "2026-08-17T00:34:12.709Z"
+          },
+          "packingList": {
+            "packingListNumber": "PL-COCOA-2408",
+            "packagesCount": 160,
+            "packageType": "Jute Sacks (62.5 kg each)",
+            "containerNumber": "MSKU-948271-0",
+            "sealNumber": "CI-SEAL-88210",
+            "grossWeight": 10250,
+            "netWeight": 10000
+          },
+          "inspectionCertificate": {
+            "issuer": "SGS Agricultural Services Côte d'Ivoire",
+            "certificateNumber": "SGS-CI-2026-0941",
+            "moistureContent": 6.8,
+            "beanCount": 102,
+            "fermentationRate": 86.4,
+            "grade": "Grade 1 Export Standard",
+            "containerNumber": "MSKU-948271-0",
+            "inspectionDate": "2026-08-16T00:34:12.709Z",
+            "isCertified": true
+          },
+          "tracking": {
+            "currentLocation": "Bay of Biscay (45.2 N, 6.8 W)",
+            "vesselStatus": "UNDERWAY",
+            "speedKnots": 18.4,
+            "estimatedArrival": "2026-08-30T00:34:12.709Z"
+          },
+          "photos": [
+            "https://images.unsplash.com/photo-1587132137056-bfbf0166836e?w=800&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop"
+          ],
+          "tamperDetected": false
+        },
+        "tamperDetected": false,
+        "isDemoEvidence": true,
+        "submittedBy": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "submissionTxHash": null,
+        "createdAt": "2026-08-20T00:34:12.746Z"
+      }
+    ],
+    [
+      "0x434f464645452d32343039000000000000000000000000000000000000000000",
+      {
+        "id": "EVD-1787186052814-409",
+        "orderId": "0x434f464645452d32343039000000000000000000000000000000000000000000",
+        "evidenceHash": "0xc1445bf2ff0c707f7ed3cb8b9df007992f24bc0288599f638dc8b119e7147c08",
+        "ipfsUri": "ipfs://QmTradeLockEvidence1787186052816",
+        "payload": {
+          "billOfLading": {
+            "blNumber": "ONE-DAD-RTM-44109",
+            "carrier": "Ocean Network Express (ONE)",
+            "vesselName": "ONE Commitment (IMO: 9628178)",
+            "containerNumber": "ONEY-381029-4",
+            "sealNumber": "VN-CUSTOMS-4192",
+            "grossWeight": 20400,
+            "netWeight": 20000,
+            "portOfLoading": "Da Nang, Vietnam",
+            "portOfDischarge": "Rotterdam, Netherlands",
+            "issueDate": "2026-08-02T00:34:12.709Z",
+            "eta": "2026-08-28T00:34:12.709Z",
+            "shippedOnBoard": true
+          },
+          "commercialInvoice": {
+            "invoiceNumber": "INV-DL-2026-441",
+            "quantity": 20000,
+            "unitPrice": 1.2,
+            "totalAmount": 24000,
+            "currency": "BOT",
+            "issueDate": "2026-08-02T00:34:12.709Z"
+          },
+          "packingList": {
+            "packingListNumber": "PL-DL-2026-441",
+            "packagesCount": 333,
+            "packageType": "GrainPro & Jute Bags",
+            "containerNumber": "ONEY-381029-4",
+            "sealNumber": "VN-CUSTOMS-4192",
+            "grossWeight": 20400,
+            "netWeight": 20000
+          },
+          "inspectionCertificate": {
+            "issuer": "Vinacontrol Da Nang Quality Assurance",
+            "certificateNumber": "VINA-VN-2026-1182",
+            "moistureContent": 12.8,
+            "grade": "Screen 18 Grade 1",
+            "containerNumber": "ONEY-381029-4",
+            "inspectionDate": "2026-08-01T00:34:12.709Z",
+            "isCertified": true
+          },
+          "tracking": {
+            "currentLocation": "Red Sea / Suez Approach",
+            "vesselStatus": "UNDERWAY",
+            "speedKnots": 15.2,
+            "estimatedArrival": "2026-08-28T00:34:12.709Z"
+          },
+          "photos": [
+            "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&auto=format&fit=crop"
+          ],
+          "tamperDetected": false
+        },
+        "tamperDetected": false,
+        "isDemoEvidence": true,
+        "submittedBy": "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65",
+        "submissionTxHash": null,
+        "createdAt": "2026-08-20T00:34:12.816Z"
+      }
+    ],
+    [
+      "0x434f505045522d32343130000000000000000000000000000000000000000000",
+      {
+        "id": "EVD-1787186052892-731",
+        "orderId": "0x434f505045522d32343130000000000000000000000000000000000000000000",
+        "evidenceHash": "0x67ff23761d134c516eafa9aa841e6a3ed8acdb2e1f539569049db8cd0400ab68",
+        "ipfsUri": "ipfs://QmTradeLockEvidence1787186052895",
+        "payload": {
+          "billOfLading": {
+            "blNumber": "HLCU-ANF-HOU-77218",
+            "carrier": "Hapag-Lloyd AG",
+            "vesselName": "Valparaiso Express (IMO: 9718428)",
+            "containerNumber": "HLXU-882910-1",
+            "sealNumber": "CL-SEAL-FORGED-01",
+            "grossWeight": 42300,
+            "netWeight": 41500,
+            "portOfLoading": "Antofagasta, Chile",
+            "portOfDischarge": "Houston, USA",
+            "issueDate": "2026-08-18T00:34:12.710Z",
+            "eta": "2026-09-01T00:34:12.710Z",
+            "shippedOnBoard": true
+          },
+          "commercialInvoice": {
+            "invoiceNumber": "INV-PAC-2026-009",
+            "quantity": 50000,
+            "unitPrice": 0.9,
+            "totalAmount": 45000,
+            "currency": "BOT",
+            "issueDate": "2026-08-18T00:34:12.710Z"
+          },
+          "packingList": {
+            "packingListNumber": "PL-PAC-2026-009",
+            "packagesCount": 18,
+            "packageType": "Steel strapped bundles",
+            "containerNumber": "HLXU-441200-9",
+            "sealNumber": "CL-SEAL-DIFF-99",
+            "grossWeight": 42300,
+            "netWeight": 41500
+          },
+          "inspectionCertificate": {
+            "issuer": "Alex Stewart International Chile",
+            "certificateNumber": "ASI-CL-2026-3021",
+            "purity": 98.4,
+            "grade": "Commercial Grade B (Substandard)",
+            "containerNumber": "HLXU-882910-1",
+            "inspectionDate": "2026-08-17T00:34:12.710Z",
+            "isCertified": false
+          },
+          "tracking": {
+            "currentLocation": "Pacific Coast Offshore Peru",
+            "vesselStatus": "UNDERWAY",
+            "speedKnots": 19,
+            "estimatedArrival": "2026-09-01T00:34:12.710Z"
+          },
+          "photos": [
+            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop"
+          ],
+          "tamperDetected": true,
+          "isForged": true
+        },
+        "tamperDetected": true,
+        "isDemoEvidence": true,
+        "submittedBy": "0x976ea74026e726554db657fa54763abd0c3a0aa9",
+        "submissionTxHash": null,
+        "createdAt": "2026-08-20T00:34:12.895Z"
+      }
+    ],
+    [
+      "0x504f2d3137383731333936373538373100000000000000000000000000000000",
+      {
+        "id": "EVD-1787139675888-873",
+        "orderId": "0x504f2d3137383731333936373538373100000000000000000000000000000000",
+        "evidenceHash": "0xd535ed530d5dcb6056f54a086605eecb7cbe4c8925ca9244d6fddc639456e9b7",
+        "ipfsUri": "ipfs://QmTradeLockEvidence1787139675892",
+        "payload": {
+          "billOfLading": {
+            "blNumber": "MSCU-DAR-ANT-1092",
+            "carrier": "MSC",
+            "containerNumber": "MSKU-112233-4",
+            "sealNumber": "TZ-SEAL-9988",
+            "netWeight": 15,
+            "issueDate": "2026-08-19T11:41:15.881Z",
+            "eta": "2026-08-27T11:41:15.881Z"
+          },
+          "commercialInvoice": {
+            "invoiceNumber": "INV-TZ-2026-001",
+            "quantity": 15,
+            "totalAmount": 22000
+          },
+          "packingList": {
+            "containerNumber": "MSKU-112233-4",
+            "sealNumber": "TZ-SEAL-9988",
+            "netWeight": 15
+          },
+          "inspectionCertificate": {
+            "issuer": "SGS Tanzania",
+            "moistureContent": 10.8,
+            "grade": "Peaberry Grade 1",
+            "isCertified": true
+          },
+          "photos": [
+            "https://example.com/cargo1.jpg"
+          ]
+        },
+        "tamperDetected": false,
+        "isDemoEvidence": false,
+        "submittedBy": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "submissionTxHash": null,
+        "createdAt": "2026-08-19T11:41:15.892Z"
+      }
+    ],
+    [
+      "0x504f2d3137383731333937343032363200000000000000000000000000000000",
+      {
+        "id": "EVD-1787139740283-601",
+        "orderId": "0x504f2d3137383731333937343032363200000000000000000000000000000000",
+        "evidenceHash": "0x45f6cc04a46ed0893b995a28be5e30128f04fb82741c36a77587f352e7e2abd3",
+        "ipfsUri": "ipfs://QmTradeLockEvidence1787139740290",
+        "payload": {
+          "billOfLading": {
+            "blNumber": "MSCU-DAR-ANT-1092",
+            "carrier": "MSC",
+            "containerNumber": "MSKU-112233-4",
+            "sealNumber": "TZ-SEAL-9988",
+            "netWeight": 15,
+            "issueDate": "2026-08-19T11:42:20.277Z",
+            "eta": "2026-08-27T11:42:20.277Z"
+          },
+          "commercialInvoice": {
+            "invoiceNumber": "INV-TZ-2026-001",
+            "quantity": 15,
+            "totalAmount": 22000
+          },
+          "packingList": {
+            "containerNumber": "MSKU-112233-4",
+            "sealNumber": "TZ-SEAL-9988",
+            "netWeight": 15
+          },
+          "inspectionCertificate": {
+            "issuer": "SGS Tanzania",
+            "moistureContent": 10.8,
+            "grade": "Peaberry Grade 1",
+            "isCertified": true
+          },
+          "photos": [
+            "https://example.com/cargo1.jpg"
+          ]
+        },
+        "tamperDetected": false,
+        "isDemoEvidence": false,
+        "submittedBy": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "submissionTxHash": null,
+        "createdAt": "2026-08-19T11:42:20.290Z"
+      }
+    ],
+    [
+      "0x504f2d3137383731343239353339353800000000000000000000000000000000",
+      {
+        "id": "EVD-1787142953980-683",
+        "orderId": "0x504f2d3137383731343239353339353800000000000000000000000000000000",
+        "evidenceHash": "0x0e8035021f2bc467f8c313528eaf10f991ea00fabe3ab228091820b7044d0235",
+        "ipfsUri": "ipfs://QmTradeLockEvidence1787142953986",
+        "payload": {
+          "billOfLading": {
+            "blNumber": "MSCU-DAR-ANT-1092",
+            "carrier": "MSC",
+            "containerNumber": "MSKU-112233-4",
+            "sealNumber": "TZ-SEAL-9988",
+            "netWeight": 15,
+            "issueDate": "2026-08-19T12:35:53.973Z",
+            "eta": "2026-08-27T12:35:53.973Z"
+          },
+          "commercialInvoice": {
+            "invoiceNumber": "INV-TZ-2026-001",
+            "quantity": 15,
+            "totalAmount": 22000
+          },
+          "packingList": {
+            "containerNumber": "MSKU-112233-4",
+            "sealNumber": "TZ-SEAL-9988",
+            "netWeight": 15
+          },
+          "inspectionCertificate": {
+            "issuer": "SGS Tanzania",
+            "moistureContent": 10.8,
+            "grade": "Peaberry Grade 1",
+            "isCertified": true
+          },
+          "photos": [
+            "https://example.com/cargo1.jpg"
+          ]
+        },
+        "tamperDetected": false,
+        "isDemoEvidence": false,
+        "submittedBy": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "submissionTxHash": null,
+        "createdAt": "2026-08-19T12:35:53.986Z"
+      }
+    ],
+    [
+      "0x504f2d3137383731383632383336353000000000000000000000000000000000",
+      {
+        "id": "EVD-1787186283734-650",
+        "orderId": "0x504f2d3137383731383632383336353000000000000000000000000000000000",
+        "evidenceHash": "0x230c74b6328b7666ea1b272bfedc3d65c287b570f650b215998b5d87bac12cdb",
+        "ipfsUri": "ipfs://QmTradeLockEvidence1787186283734",
+        "payload": {
+          "files": [
+            {
+              "fileName": "BOL-GH-2024.pdf",
+              "fileSize": 245000,
+              "type": "BILL_OF_LADING"
+            }
+          ],
+          "trackingReference": "MAERSK-GH-8821",
+          "notes": "Loaded and cleared port customs"
+        },
+        "tamperDetected": false,
+        "isDemoEvidence": false,
+        "submittedBy": "0x91f3b2ac10ed4f5e6a7b8c9d0e1f2a3b4c5d6e7f",
+        "submissionTxHash": null,
+        "createdAt": "2026-08-20T00:38:03.734Z"
+      }
+    ]
+  ],
+  "ai_reviews": [
+    [
+      "REV-1787139675912-14",
+      {
+        "id": "REV-1787139675912-14",
+        "orderId": "0x504f2d3137383731333936373538373100000000000000000000000000000000",
+        "overallScore": 55,
+        "recommendation": "FLAG_DISPUTE",
+        "recommendationCode": 3,
+        "confidence": 55,
+        "quantityMatch": "NOT_VERIFIABLE",
+        "dateMatch": "NOT_VERIFIABLE",
+        "documentConsistency": "NOT_VERIFIABLE",
+        "conditionAssessment": "NOT_VERIFIABLE",
+        "anomalies": [
+          "Missing quantity documentation in evidence manifest"
+        ],
+        "summary": "CRITICAL FRAUD / DISCREPANCY DETECTED: Missing quantity documentation in evidence manifest. Recommend filing onchain dispute.",
+        "epistemicBreakdown": {
+          "verifiedCount": 0,
+          "notVerifiableCount": 4,
+          "unverifiedCount": 4,
+          "claims": [
+            {
+              "claim": "Quantity & Weight",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No weight or quantity documents provided in evidence bundle"
+            },
+            {
+              "claim": "Delivery Timeline",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No bill of lading issue date or vessel ETA provided"
+            },
+            {
+              "claim": "Manifest & Seal Consistency",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No container or seal numbers provided across manifests"
+            },
+            {
+              "claim": "Laboratory Quality & Assay",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No third-party inspection certificate (SGS / Bureau Veritas) uploaded"
+            }
+          ]
+        },
+        "vectors": {
+          "vector1_quantity": "NOT_VERIFIABLE",
+          "vector2_dates": "NOT_VERIFIABLE",
+          "vector3_documents": "NOT_VERIFIABLE",
+          "vector4_quality": "NOT_VERIFIABLE",
+          "vector5_tamperScan": "CLEAN"
+        },
+        "fullReport": {
+          "overallScore": 55,
+          "recommendation": "FLAG_DISPUTE",
+          "recommendationCode": 3,
+          "confidence": 55,
+          "quantityEvaluation": {
+            "result": "NOT_VERIFIABLE",
+            "expected": "15 Metric Tons",
+            "evidence": "N/A Metric Tons",
+            "status": "NOT_VERIFIABLE"
+          },
+          "dateEvaluation": {
+            "result": "NOT_VERIFIABLE",
+            "requiredDelivery": "2026-09-02T11:41:15.871Z",
+            "evidenceDate": "N/A",
+            "status": "NOT_VERIFIABLE"
+          },
+          "documentConsistency": {
+            "status": "NOT_VERIFIABLE",
+            "details": "Discrepancy detected between manifests"
+          },
+          "conditionAssessment": {
+            "status": "NOT_VERIFIABLE",
+            "details": "No lab certificate attached"
+          },
+          "imageEvaluation": {
+            "hasImageEvidence": false,
+            "damageAssessment": {
+              "damageDetected": false,
+              "status": "NOT_VERIFIABLE"
+            },
+            "status": "NOT_VERIFIABLE"
+          },
+          "anomalies": [
+            "Missing quantity documentation in evidence manifest"
+          ],
+          "summary": "CRITICAL FRAUD / DISCREPANCY DETECTED: Missing quantity documentation in evidence manifest. Recommend filing onchain dispute.",
+          "epistemicBreakdown": {
+            "verifiedCount": 0,
+            "notVerifiableCount": 4,
+            "unverifiedCount": 4,
+            "claims": [
+              {
+                "claim": "Quantity & Weight",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No weight or quantity documents provided in evidence bundle"
+              },
+              {
+                "claim": "Delivery Timeline",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No bill of lading issue date or vessel ETA provided"
+              },
+              {
+                "claim": "Manifest & Seal Consistency",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No container or seal numbers provided across manifests"
+              },
+              {
+                "claim": "Laboratory Quality & Assay",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No third-party inspection certificate (SGS / Bureau Veritas) uploaded"
+              }
+            ]
+          },
+          "vectors": {
+            "vector1_quantity": "NOT_VERIFIABLE",
+            "vector2_dates": "NOT_VERIFIABLE",
+            "vector3_documents": "NOT_VERIFIABLE",
+            "vector4_quality": "NOT_VERIFIABLE",
+            "vector5_tamperScan": "CLEAN"
+          }
+        },
+        "aiProvider": "DeterministicRuleAIProvider",
+        "validationStatus": "VALID",
+        "reviewedAt": "2026-08-19T11:41:15.912Z",
+        "createdAt": "2026-08-19T11:41:15.912Z"
+      }
+    ],
+    [
+      "order_0x504f2d3137383731333936373538373100000000000000000000000000000000",
+      {
+        "id": "REV-1787139675912-14",
+        "orderId": "0x504f2d3137383731333936373538373100000000000000000000000000000000",
+        "overallScore": 55,
+        "recommendation": "FLAG_DISPUTE",
+        "recommendationCode": 3,
+        "confidence": 55,
+        "quantityMatch": "NOT_VERIFIABLE",
+        "dateMatch": "NOT_VERIFIABLE",
+        "documentConsistency": "NOT_VERIFIABLE",
+        "conditionAssessment": "NOT_VERIFIABLE",
+        "anomalies": [
+          "Missing quantity documentation in evidence manifest"
+        ],
+        "summary": "CRITICAL FRAUD / DISCREPANCY DETECTED: Missing quantity documentation in evidence manifest. Recommend filing onchain dispute.",
+        "epistemicBreakdown": {
+          "verifiedCount": 0,
+          "notVerifiableCount": 4,
+          "unverifiedCount": 4,
+          "claims": [
+            {
+              "claim": "Quantity & Weight",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No weight or quantity documents provided in evidence bundle"
+            },
+            {
+              "claim": "Delivery Timeline",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No bill of lading issue date or vessel ETA provided"
+            },
+            {
+              "claim": "Manifest & Seal Consistency",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No container or seal numbers provided across manifests"
+            },
+            {
+              "claim": "Laboratory Quality & Assay",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No third-party inspection certificate (SGS / Bureau Veritas) uploaded"
+            }
+          ]
+        },
+        "vectors": {
+          "vector1_quantity": "NOT_VERIFIABLE",
+          "vector2_dates": "NOT_VERIFIABLE",
+          "vector3_documents": "NOT_VERIFIABLE",
+          "vector4_quality": "NOT_VERIFIABLE",
+          "vector5_tamperScan": "CLEAN"
+        },
+        "fullReport": {
+          "overallScore": 55,
+          "recommendation": "FLAG_DISPUTE",
+          "recommendationCode": 3,
+          "confidence": 55,
+          "quantityEvaluation": {
+            "result": "NOT_VERIFIABLE",
+            "expected": "15 Metric Tons",
+            "evidence": "N/A Metric Tons",
+            "status": "NOT_VERIFIABLE"
+          },
+          "dateEvaluation": {
+            "result": "NOT_VERIFIABLE",
+            "requiredDelivery": "2026-09-02T11:41:15.871Z",
+            "evidenceDate": "N/A",
+            "status": "NOT_VERIFIABLE"
+          },
+          "documentConsistency": {
+            "status": "NOT_VERIFIABLE",
+            "details": "Discrepancy detected between manifests"
+          },
+          "conditionAssessment": {
+            "status": "NOT_VERIFIABLE",
+            "details": "No lab certificate attached"
+          },
+          "imageEvaluation": {
+            "hasImageEvidence": false,
+            "damageAssessment": {
+              "damageDetected": false,
+              "status": "NOT_VERIFIABLE"
+            },
+            "status": "NOT_VERIFIABLE"
+          },
+          "anomalies": [
+            "Missing quantity documentation in evidence manifest"
+          ],
+          "summary": "CRITICAL FRAUD / DISCREPANCY DETECTED: Missing quantity documentation in evidence manifest. Recommend filing onchain dispute.",
+          "epistemicBreakdown": {
+            "verifiedCount": 0,
+            "notVerifiableCount": 4,
+            "unverifiedCount": 4,
+            "claims": [
+              {
+                "claim": "Quantity & Weight",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No weight or quantity documents provided in evidence bundle"
+              },
+              {
+                "claim": "Delivery Timeline",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No bill of lading issue date or vessel ETA provided"
+              },
+              {
+                "claim": "Manifest & Seal Consistency",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No container or seal numbers provided across manifests"
+              },
+              {
+                "claim": "Laboratory Quality & Assay",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No third-party inspection certificate (SGS / Bureau Veritas) uploaded"
+              }
+            ]
+          },
+          "vectors": {
+            "vector1_quantity": "NOT_VERIFIABLE",
+            "vector2_dates": "NOT_VERIFIABLE",
+            "vector3_documents": "NOT_VERIFIABLE",
+            "vector4_quality": "NOT_VERIFIABLE",
+            "vector5_tamperScan": "CLEAN"
+          }
+        },
+        "aiProvider": "DeterministicRuleAIProvider",
+        "validationStatus": "VALID",
+        "reviewedAt": "2026-08-19T11:41:15.912Z",
+        "createdAt": "2026-08-19T11:41:15.912Z"
+      }
+    ],
+    [
+      "REV-1787139740314-445",
+      {
+        "id": "REV-1787139740314-445",
+        "orderId": "0x504f2d3137383731333937343032363200000000000000000000000000000000",
+        "overallScore": 100,
+        "recommendation": "RELEASE_FUNDS",
+        "recommendationCode": 1,
+        "confidence": 100,
+        "quantityMatch": "MATCH",
+        "dateMatch": "MATCH",
+        "documentConsistency": "MATCH",
+        "conditionAssessment": "PASS",
+        "anomalies": [],
+        "summary": "100% compliance across all 5 verification vectors. All contracted criteria fulfilled.",
+        "epistemicBreakdown": {
+          "verifiedCount": 4,
+          "notVerifiableCount": 0,
+          "unverifiedCount": 0,
+          "claims": [
+            {
+              "claim": "Quantity & Weight",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Expected: 15 Metric Tons | Evidence: 15 Metric Tons"
+            },
+            {
+              "claim": "Delivery Timeline",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Deadline: 2026-09-02 | ETA: 2026-08-27"
+            },
+            {
+              "claim": "Manifest & Seal Consistency",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Container: MSKU-112233-4 | Seal: TZ-SEAL-9988"
+            },
+            {
+              "claim": "Laboratory Quality & Assay",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Certified by SGS Tanzania | Grade: Peaberry Grade 1"
+            }
+          ]
+        },
+        "vectors": {
+          "vector1_quantity": "MATCH",
+          "vector2_dates": "MATCH",
+          "vector3_documents": "MATCH",
+          "vector4_quality": "PASS",
+          "vector5_tamperScan": "CLEAN"
+        },
+        "fullReport": {
+          "overallScore": 100,
+          "recommendation": "RELEASE_FUNDS",
+          "recommendationCode": 1,
+          "confidence": 100,
+          "quantityEvaluation": {
+            "result": "MATCH",
+            "expected": "15 Metric Tons",
+            "evidence": "15 Metric Tons",
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "dateEvaluation": {
+            "result": "MATCH",
+            "requiredDelivery": "2026-09-02T11:42:20.261Z",
+            "evidenceDate": "2026-08-27",
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "documentConsistency": {
+            "status": "MATCH",
+            "details": "Container & Customs Seal numbers match across all manifests"
+          },
+          "conditionAssessment": {
+            "status": "PASS",
+            "details": "Inspected by SGS Tanzania"
+          },
+          "imageEvaluation": {
+            "hasImageEvidence": true,
+            "damageAssessment": {
+              "damageDetected": false,
+              "status": "VERIFIED_FROM_EVIDENCE"
+            },
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "anomalies": [],
+          "summary": "100% compliance across all 5 verification vectors. All contracted criteria fulfilled.",
+          "epistemicBreakdown": {
+            "verifiedCount": 4,
+            "notVerifiableCount": 0,
+            "unverifiedCount": 0,
+            "claims": [
+              {
+                "claim": "Quantity & Weight",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Expected: 15 Metric Tons | Evidence: 15 Metric Tons"
+              },
+              {
+                "claim": "Delivery Timeline",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Deadline: 2026-09-02 | ETA: 2026-08-27"
+              },
+              {
+                "claim": "Manifest & Seal Consistency",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Container: MSKU-112233-4 | Seal: TZ-SEAL-9988"
+              },
+              {
+                "claim": "Laboratory Quality & Assay",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Certified by SGS Tanzania | Grade: Peaberry Grade 1"
+              }
+            ]
+          },
+          "vectors": {
+            "vector1_quantity": "MATCH",
+            "vector2_dates": "MATCH",
+            "vector3_documents": "MATCH",
+            "vector4_quality": "PASS",
+            "vector5_tamperScan": "CLEAN"
+          }
+        },
+        "aiProvider": "DeterministicRuleAIProvider",
+        "validationStatus": "VALID",
+        "reviewedAt": "2026-08-19T11:42:20.314Z",
+        "createdAt": "2026-08-19T11:42:20.314Z"
+      }
+    ],
+    [
+      "order_0x504f2d3137383731333937343032363200000000000000000000000000000000",
+      {
+        "id": "REV-1787139740314-445",
+        "orderId": "0x504f2d3137383731333937343032363200000000000000000000000000000000",
+        "overallScore": 100,
+        "recommendation": "RELEASE_FUNDS",
+        "recommendationCode": 1,
+        "confidence": 100,
+        "quantityMatch": "MATCH",
+        "dateMatch": "MATCH",
+        "documentConsistency": "MATCH",
+        "conditionAssessment": "PASS",
+        "anomalies": [],
+        "summary": "100% compliance across all 5 verification vectors. All contracted criteria fulfilled.",
+        "epistemicBreakdown": {
+          "verifiedCount": 4,
+          "notVerifiableCount": 0,
+          "unverifiedCount": 0,
+          "claims": [
+            {
+              "claim": "Quantity & Weight",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Expected: 15 Metric Tons | Evidence: 15 Metric Tons"
+            },
+            {
+              "claim": "Delivery Timeline",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Deadline: 2026-09-02 | ETA: 2026-08-27"
+            },
+            {
+              "claim": "Manifest & Seal Consistency",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Container: MSKU-112233-4 | Seal: TZ-SEAL-9988"
+            },
+            {
+              "claim": "Laboratory Quality & Assay",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Certified by SGS Tanzania | Grade: Peaberry Grade 1"
+            }
+          ]
+        },
+        "vectors": {
+          "vector1_quantity": "MATCH",
+          "vector2_dates": "MATCH",
+          "vector3_documents": "MATCH",
+          "vector4_quality": "PASS",
+          "vector5_tamperScan": "CLEAN"
+        },
+        "fullReport": {
+          "overallScore": 100,
+          "recommendation": "RELEASE_FUNDS",
+          "recommendationCode": 1,
+          "confidence": 100,
+          "quantityEvaluation": {
+            "result": "MATCH",
+            "expected": "15 Metric Tons",
+            "evidence": "15 Metric Tons",
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "dateEvaluation": {
+            "result": "MATCH",
+            "requiredDelivery": "2026-09-02T11:42:20.261Z",
+            "evidenceDate": "2026-08-27",
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "documentConsistency": {
+            "status": "MATCH",
+            "details": "Container & Customs Seal numbers match across all manifests"
+          },
+          "conditionAssessment": {
+            "status": "PASS",
+            "details": "Inspected by SGS Tanzania"
+          },
+          "imageEvaluation": {
+            "hasImageEvidence": true,
+            "damageAssessment": {
+              "damageDetected": false,
+              "status": "VERIFIED_FROM_EVIDENCE"
+            },
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "anomalies": [],
+          "summary": "100% compliance across all 5 verification vectors. All contracted criteria fulfilled.",
+          "epistemicBreakdown": {
+            "verifiedCount": 4,
+            "notVerifiableCount": 0,
+            "unverifiedCount": 0,
+            "claims": [
+              {
+                "claim": "Quantity & Weight",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Expected: 15 Metric Tons | Evidence: 15 Metric Tons"
+              },
+              {
+                "claim": "Delivery Timeline",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Deadline: 2026-09-02 | ETA: 2026-08-27"
+              },
+              {
+                "claim": "Manifest & Seal Consistency",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Container: MSKU-112233-4 | Seal: TZ-SEAL-9988"
+              },
+              {
+                "claim": "Laboratory Quality & Assay",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Certified by SGS Tanzania | Grade: Peaberry Grade 1"
+              }
+            ]
+          },
+          "vectors": {
+            "vector1_quantity": "MATCH",
+            "vector2_dates": "MATCH",
+            "vector3_documents": "MATCH",
+            "vector4_quality": "PASS",
+            "vector5_tamperScan": "CLEAN"
+          }
+        },
+        "aiProvider": "DeterministicRuleAIProvider",
+        "validationStatus": "VALID",
+        "reviewedAt": "2026-08-19T11:42:20.314Z",
+        "createdAt": "2026-08-19T11:42:20.314Z"
+      }
+    ],
+    [
+      "REV-1787142954024-212",
+      {
+        "id": "REV-1787142954024-212",
+        "orderId": "0x504f2d3137383731343239353339353800000000000000000000000000000000",
+        "overallScore": 100,
+        "recommendation": "RELEASE_FUNDS",
+        "recommendationCode": 1,
+        "confidence": 100,
+        "quantityMatch": "MATCH",
+        "dateMatch": "MATCH",
+        "documentConsistency": "MATCH",
+        "conditionAssessment": "PASS",
+        "anomalies": [],
+        "summary": "100% compliance across all 5 verification vectors. All contracted criteria fulfilled.",
+        "epistemicBreakdown": {
+          "verifiedCount": 4,
+          "notVerifiableCount": 0,
+          "unverifiedCount": 0,
+          "claims": [
+            {
+              "claim": "Quantity & Weight",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Expected: 15 Metric Tons | Evidence: 15 Metric Tons"
+            },
+            {
+              "claim": "Delivery Timeline",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Deadline: 2026-09-02 | ETA: 2026-08-27"
+            },
+            {
+              "claim": "Manifest & Seal Consistency",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Container: MSKU-112233-4 | Seal: TZ-SEAL-9988"
+            },
+            {
+              "claim": "Laboratory Quality & Assay",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Certified by SGS Tanzania | Grade: Peaberry Grade 1"
+            }
+          ]
+        },
+        "vectors": {
+          "vector1_quantity": "MATCH",
+          "vector2_dates": "MATCH",
+          "vector3_documents": "MATCH",
+          "vector4_quality": "PASS",
+          "vector5_tamperScan": "CLEAN"
+        },
+        "fullReport": {
+          "overallScore": 100,
+          "recommendation": "RELEASE_FUNDS",
+          "recommendationCode": 1,
+          "confidence": 100,
+          "quantityEvaluation": {
+            "result": "MATCH",
+            "expected": "15 Metric Tons",
+            "evidence": "15 Metric Tons",
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "dateEvaluation": {
+            "result": "MATCH",
+            "requiredDelivery": "2026-09-02",
+            "evidenceDate": "2026-08-27",
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "documentConsistency": {
+            "status": "MATCH",
+            "details": "Container & Customs Seal numbers match across all manifests"
+          },
+          "conditionAssessment": {
+            "status": "PASS",
+            "details": "Inspected by SGS Tanzania"
+          },
+          "imageEvaluation": {
+            "hasImageEvidence": true,
+            "damageAssessment": {
+              "damageDetected": false,
+              "status": "VERIFIED_FROM_EVIDENCE"
+            },
+            "labelsAndMarkings": {
+              "status": "VERIFIED_FROM_EVIDENCE"
+            },
+            "visiblePackaging": {
+              "status": "VERIFIED_FROM_EVIDENCE"
+            },
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "anomalies": [],
+          "summary": "100% compliance across all 5 verification vectors. All contracted criteria fulfilled.",
+          "epistemicBreakdown": {
+            "verifiedCount": 4,
+            "notVerifiableCount": 0,
+            "unverifiedCount": 0,
+            "claims": [
+              {
+                "claim": "Quantity & Weight",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Expected: 15 Metric Tons | Evidence: 15 Metric Tons"
+              },
+              {
+                "claim": "Delivery Timeline",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Deadline: 2026-09-02 | ETA: 2026-08-27"
+              },
+              {
+                "claim": "Manifest & Seal Consistency",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Container: MSKU-112233-4 | Seal: TZ-SEAL-9988"
+              },
+              {
+                "claim": "Laboratory Quality & Assay",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Certified by SGS Tanzania | Grade: Peaberry Grade 1"
+              }
+            ]
+          },
+          "vectors": {
+            "vector1_quantity": "MATCH",
+            "vector2_dates": "MATCH",
+            "vector3_documents": "MATCH",
+            "vector4_quality": "PASS",
+            "vector5_tamperScan": "CLEAN"
+          }
+        },
+        "aiProvider": "DeterministicRuleAIProvider",
+        "validationStatus": "VALID",
+        "reviewedAt": "2026-08-19T12:35:54.025Z",
+        "createdAt": "2026-08-19T12:35:54.025Z"
+      }
+    ],
+    [
+      "order_0x504f2d3137383731343239353339353800000000000000000000000000000000",
+      {
+        "id": "REV-1787142954024-212",
+        "orderId": "0x504f2d3137383731343239353339353800000000000000000000000000000000",
+        "overallScore": 100,
+        "recommendation": "RELEASE_FUNDS",
+        "recommendationCode": 1,
+        "confidence": 100,
+        "quantityMatch": "MATCH",
+        "dateMatch": "MATCH",
+        "documentConsistency": "MATCH",
+        "conditionAssessment": "PASS",
+        "anomalies": [],
+        "summary": "100% compliance across all 5 verification vectors. All contracted criteria fulfilled.",
+        "epistemicBreakdown": {
+          "verifiedCount": 4,
+          "notVerifiableCount": 0,
+          "unverifiedCount": 0,
+          "claims": [
+            {
+              "claim": "Quantity & Weight",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Expected: 15 Metric Tons | Evidence: 15 Metric Tons"
+            },
+            {
+              "claim": "Delivery Timeline",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Deadline: 2026-09-02 | ETA: 2026-08-27"
+            },
+            {
+              "claim": "Manifest & Seal Consistency",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Container: MSKU-112233-4 | Seal: TZ-SEAL-9988"
+            },
+            {
+              "claim": "Laboratory Quality & Assay",
+              "status": "VERIFIED_FROM_EVIDENCE",
+              "detail": "Certified by SGS Tanzania | Grade: Peaberry Grade 1"
+            }
+          ]
+        },
+        "vectors": {
+          "vector1_quantity": "MATCH",
+          "vector2_dates": "MATCH",
+          "vector3_documents": "MATCH",
+          "vector4_quality": "PASS",
+          "vector5_tamperScan": "CLEAN"
+        },
+        "fullReport": {
+          "overallScore": 100,
+          "recommendation": "RELEASE_FUNDS",
+          "recommendationCode": 1,
+          "confidence": 100,
+          "quantityEvaluation": {
+            "result": "MATCH",
+            "expected": "15 Metric Tons",
+            "evidence": "15 Metric Tons",
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "dateEvaluation": {
+            "result": "MATCH",
+            "requiredDelivery": "2026-09-02",
+            "evidenceDate": "2026-08-27",
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "documentConsistency": {
+            "status": "MATCH",
+            "details": "Container & Customs Seal numbers match across all manifests"
+          },
+          "conditionAssessment": {
+            "status": "PASS",
+            "details": "Inspected by SGS Tanzania"
+          },
+          "imageEvaluation": {
+            "hasImageEvidence": true,
+            "damageAssessment": {
+              "damageDetected": false,
+              "status": "VERIFIED_FROM_EVIDENCE"
+            },
+            "labelsAndMarkings": {
+              "status": "VERIFIED_FROM_EVIDENCE"
+            },
+            "visiblePackaging": {
+              "status": "VERIFIED_FROM_EVIDENCE"
+            },
+            "status": "VERIFIED_FROM_EVIDENCE"
+          },
+          "anomalies": [],
+          "summary": "100% compliance across all 5 verification vectors. All contracted criteria fulfilled.",
+          "epistemicBreakdown": {
+            "verifiedCount": 4,
+            "notVerifiableCount": 0,
+            "unverifiedCount": 0,
+            "claims": [
+              {
+                "claim": "Quantity & Weight",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Expected: 15 Metric Tons | Evidence: 15 Metric Tons"
+              },
+              {
+                "claim": "Delivery Timeline",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Deadline: 2026-09-02 | ETA: 2026-08-27"
+              },
+              {
+                "claim": "Manifest & Seal Consistency",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Container: MSKU-112233-4 | Seal: TZ-SEAL-9988"
+              },
+              {
+                "claim": "Laboratory Quality & Assay",
+                "status": "VERIFIED_FROM_EVIDENCE",
+                "detail": "Certified by SGS Tanzania | Grade: Peaberry Grade 1"
+              }
+            ]
+          },
+          "vectors": {
+            "vector1_quantity": "MATCH",
+            "vector2_dates": "MATCH",
+            "vector3_documents": "MATCH",
+            "vector4_quality": "PASS",
+            "vector5_tamperScan": "CLEAN"
+          }
+        },
+        "aiProvider": "DeterministicRuleAIProvider",
+        "validationStatus": "VALID",
+        "reviewedAt": "2026-08-19T12:35:54.025Z",
+        "createdAt": "2026-08-19T12:35:54.025Z"
+      }
+    ],
+    [
+      "REV-1787186283771-503",
+      {
+        "id": "REV-1787186283771-503",
+        "orderId": "0x504f2d3137383731383632383336353000000000000000000000000000000000",
+        "overallScore": 55,
+        "recommendation": "FLAG_DISPUTE",
+        "recommendationCode": 3,
+        "confidence": 55,
+        "quantityMatch": "NOT_VERIFIABLE",
+        "dateMatch": "NOT_VERIFIABLE",
+        "documentConsistency": "NOT_VERIFIABLE",
+        "conditionAssessment": "NOT_VERIFIABLE",
+        "anomalies": [
+          "Missing quantity documentation in evidence manifest"
+        ],
+        "summary": "CRITICAL FRAUD / DISCREPANCY DETECTED: Missing quantity documentation in evidence manifest. Recommend filing onchain dispute.",
+        "epistemicBreakdown": {
+          "verifiedCount": 0,
+          "notVerifiableCount": 4,
+          "unverifiedCount": 4,
+          "claims": [
+            {
+              "claim": "Quantity & Weight",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No weight or quantity documents provided in evidence bundle"
+            },
+            {
+              "claim": "Delivery Timeline",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No bill of lading issue date or vessel ETA provided"
+            },
+            {
+              "claim": "Manifest & Seal Consistency",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No container or seal numbers provided across manifests"
+            },
+            {
+              "claim": "Laboratory Quality & Assay",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No third-party inspection certificate (SGS / Bureau Veritas) uploaded"
+            }
+          ]
+        },
+        "vectors": {
+          "vector1_quantity": "NOT_VERIFIABLE",
+          "vector2_dates": "NOT_VERIFIABLE",
+          "vector3_documents": "NOT_VERIFIABLE",
+          "vector4_quality": "NOT_VERIFIABLE",
+          "vector5_tamperScan": "CLEAN"
+        },
+        "fullReport": {
+          "overallScore": 55,
+          "recommendation": "FLAG_DISPUTE",
+          "recommendationCode": 3,
+          "confidence": 55,
+          "quantityEvaluation": {
+            "result": "NOT_VERIFIABLE",
+            "expected": "15 TONS",
+            "evidence": "N/A",
+            "status": "NOT_VERIFIABLE"
+          },
+          "dateEvaluation": {
+            "result": "NOT_VERIFIABLE",
+            "requiredDelivery": "2026-08-30",
+            "evidenceDate": "N/A",
+            "status": "NOT_VERIFIABLE"
+          },
+          "documentConsistency": {
+            "status": "NOT_VERIFIABLE",
+            "details": "Discrepancy detected between manifests"
+          },
+          "conditionAssessment": {
+            "status": "NOT_VERIFIABLE",
+            "details": "No lab certificate attached"
+          },
+          "imageEvaluation": {
+            "hasImageEvidence": false,
+            "damageAssessment": {
+              "damageDetected": false,
+              "status": "NOT_VERIFIABLE"
+            },
+            "labelsAndMarkings": {
+              "status": "NOT_VERIFIABLE"
+            },
+            "visiblePackaging": {
+              "status": "NOT_VERIFIABLE"
+            },
+            "status": "NOT_VERIFIABLE"
+          },
+          "anomalies": [
+            "Missing quantity documentation in evidence manifest"
+          ],
+          "summary": "CRITICAL FRAUD / DISCREPANCY DETECTED: Missing quantity documentation in evidence manifest. Recommend filing onchain dispute.",
+          "epistemicBreakdown": {
+            "verifiedCount": 0,
+            "notVerifiableCount": 4,
+            "unverifiedCount": 4,
+            "claims": [
+              {
+                "claim": "Quantity & Weight",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No weight or quantity documents provided in evidence bundle"
+              },
+              {
+                "claim": "Delivery Timeline",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No bill of lading issue date or vessel ETA provided"
+              },
+              {
+                "claim": "Manifest & Seal Consistency",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No container or seal numbers provided across manifests"
+              },
+              {
+                "claim": "Laboratory Quality & Assay",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No third-party inspection certificate (SGS / Bureau Veritas) uploaded"
+              }
+            ]
+          },
+          "vectors": {
+            "vector1_quantity": "NOT_VERIFIABLE",
+            "vector2_dates": "NOT_VERIFIABLE",
+            "vector3_documents": "NOT_VERIFIABLE",
+            "vector4_quality": "NOT_VERIFIABLE",
+            "vector5_tamperScan": "CLEAN"
+          }
+        },
+        "aiProvider": "DeterministicRuleAIProvider",
+        "validationStatus": "VALID",
+        "reviewedAt": "2026-08-20T00:38:03.771Z",
+        "createdAt": "2026-08-20T00:38:03.771Z"
+      }
+    ],
+    [
+      "order_0x504f2d3137383731383632383336353000000000000000000000000000000000",
+      {
+        "id": "REV-1787186283771-503",
+        "orderId": "0x504f2d3137383731383632383336353000000000000000000000000000000000",
+        "overallScore": 55,
+        "recommendation": "FLAG_DISPUTE",
+        "recommendationCode": 3,
+        "confidence": 55,
+        "quantityMatch": "NOT_VERIFIABLE",
+        "dateMatch": "NOT_VERIFIABLE",
+        "documentConsistency": "NOT_VERIFIABLE",
+        "conditionAssessment": "NOT_VERIFIABLE",
+        "anomalies": [
+          "Missing quantity documentation in evidence manifest"
+        ],
+        "summary": "CRITICAL FRAUD / DISCREPANCY DETECTED: Missing quantity documentation in evidence manifest. Recommend filing onchain dispute.",
+        "epistemicBreakdown": {
+          "verifiedCount": 0,
+          "notVerifiableCount": 4,
+          "unverifiedCount": 4,
+          "claims": [
+            {
+              "claim": "Quantity & Weight",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No weight or quantity documents provided in evidence bundle"
+            },
+            {
+              "claim": "Delivery Timeline",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No bill of lading issue date or vessel ETA provided"
+            },
+            {
+              "claim": "Manifest & Seal Consistency",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No container or seal numbers provided across manifests"
+            },
+            {
+              "claim": "Laboratory Quality & Assay",
+              "status": "NOT_VERIFIABLE",
+              "detail": "No third-party inspection certificate (SGS / Bureau Veritas) uploaded"
+            }
+          ]
+        },
+        "vectors": {
+          "vector1_quantity": "NOT_VERIFIABLE",
+          "vector2_dates": "NOT_VERIFIABLE",
+          "vector3_documents": "NOT_VERIFIABLE",
+          "vector4_quality": "NOT_VERIFIABLE",
+          "vector5_tamperScan": "CLEAN"
+        },
+        "fullReport": {
+          "overallScore": 55,
+          "recommendation": "FLAG_DISPUTE",
+          "recommendationCode": 3,
+          "confidence": 55,
+          "quantityEvaluation": {
+            "result": "NOT_VERIFIABLE",
+            "expected": "15 TONS",
+            "evidence": "N/A",
+            "status": "NOT_VERIFIABLE"
+          },
+          "dateEvaluation": {
+            "result": "NOT_VERIFIABLE",
+            "requiredDelivery": "2026-08-30",
+            "evidenceDate": "N/A",
+            "status": "NOT_VERIFIABLE"
+          },
+          "documentConsistency": {
+            "status": "NOT_VERIFIABLE",
+            "details": "Discrepancy detected between manifests"
+          },
+          "conditionAssessment": {
+            "status": "NOT_VERIFIABLE",
+            "details": "No lab certificate attached"
+          },
+          "imageEvaluation": {
+            "hasImageEvidence": false,
+            "damageAssessment": {
+              "damageDetected": false,
+              "status": "NOT_VERIFIABLE"
+            },
+            "labelsAndMarkings": {
+              "status": "NOT_VERIFIABLE"
+            },
+            "visiblePackaging": {
+              "status": "NOT_VERIFIABLE"
+            },
+            "status": "NOT_VERIFIABLE"
+          },
+          "anomalies": [
+            "Missing quantity documentation in evidence manifest"
+          ],
+          "summary": "CRITICAL FRAUD / DISCREPANCY DETECTED: Missing quantity documentation in evidence manifest. Recommend filing onchain dispute.",
+          "epistemicBreakdown": {
+            "verifiedCount": 0,
+            "notVerifiableCount": 4,
+            "unverifiedCount": 4,
+            "claims": [
+              {
+                "claim": "Quantity & Weight",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No weight or quantity documents provided in evidence bundle"
+              },
+              {
+                "claim": "Delivery Timeline",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No bill of lading issue date or vessel ETA provided"
+              },
+              {
+                "claim": "Manifest & Seal Consistency",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No container or seal numbers provided across manifests"
+              },
+              {
+                "claim": "Laboratory Quality & Assay",
+                "status": "NOT_VERIFIABLE",
+                "detail": "No third-party inspection certificate (SGS / Bureau Veritas) uploaded"
+              }
+            ]
+          },
+          "vectors": {
+            "vector1_quantity": "NOT_VERIFIABLE",
+            "vector2_dates": "NOT_VERIFIABLE",
+            "vector3_documents": "NOT_VERIFIABLE",
+            "vector4_quality": "NOT_VERIFIABLE",
+            "vector5_tamperScan": "CLEAN"
+          }
+        },
+        "aiProvider": "DeterministicRuleAIProvider",
+        "validationStatus": "VALID",
+        "reviewedAt": "2026-08-20T00:38:03.771Z",
+        "createdAt": "2026-08-20T00:38:03.771Z"
+      }
+    ]
+  ],
+  "ai_attestations": [
+    [
+      "order_0x504f2d3137383731333936373538373100000000000000000000000000000000",
+      {
+        "id": "ATT-1787139675975-875",
+        "orderId": "0x504f2d3137383731333936373538373100000000000000000000000000000000",
+        "reviewId": "REV-1787139675912-14",
+        "score": 55,
+        "recommendationCode": 3,
+        "nonce": "1787139675937778",
+        "deadline": "1787398875",
+        "signature": "0x59cf042e706226ab7017dc980c9e691d0b9595b5da54a56b532a4b19a9ad1e8e33d8e8283b82d628f64e20c6097097cfd1ea62700edf5ef71fcf1b41a1292de51c",
+        "signerAddress": "0x34090545bd562b0be1cdc855f7ca9bee4566ce51",
+        "chainId": 677,
+        "verifyingContract": "0x7C87C29d5bB020De0faF3eb2B2B11c1A2fa07B88",
+        "attestation": {
+          "orderId": "36324920710217097493654355413055331537545199899717957630592234216582459424768",
+          "evidenceHash": "0x5e97aa2fb2f0d424ff6fcad04f52ffb6247fcfea44d77e569b9fd26dcaa9afb1",
+          "reviewHash": "0xac70ce8ff4bd138e2aedc337c50d74fb8946f1538fbc1b38b202a225777babd1",
+          "score": 55,
+          "recommendation": 3,
+          "nonce": "1787139675937778",
+          "deadline": "1787398875"
+        },
+        "legacyMessageHash": "0x25f8c11d8568cb1fad3ddf3eb7c4a3520a98553765caf16cbbd44a1b738787a5",
+        "legacySignature": "0xbe44fb2d7b40a25dc257f864a056d68f0baa054173adc4db8267039ad1082c194e320d5ce20b09d66fb34096fdb969c23e0bba57fd3640ff21aeeb65f4b9207b1b",
+        "createdAt": "2026-08-19T11:41:15.975Z"
+      }
+    ],
+    [
+      "order_0x504f2d3137383731333937343032363200000000000000000000000000000000",
+      {
+        "id": "ATT-1787139740424-368",
+        "orderId": "0x504f2d3137383731333937343032363200000000000000000000000000000000",
+        "reviewId": "REV-1787139740314-445",
+        "score": 100,
+        "recommendationCode": 1,
+        "nonce": "1787139740353176",
+        "deadline": "1787398940",
+        "signature": "0x29e4ea678e2be9a8fd904fd798d64d1f134af28070ea779554808837e581285608054288818733afbb55061c24d8877eb84fe5d2c255195147adc5cd900e61a11c",
+        "signerAddress": "0x34090545bd562b0be1cdc855f7ca9bee4566ce51",
+        "chainId": 677,
+        "verifyingContract": "0x7C87C29d5bB020De0faF3eb2B2B11c1A2fa07B88",
+        "attestation": {
+          "orderId": "36324920710217097493654355782786566937166324259050897190952687501535808061440",
+          "evidenceHash": "0x5e97aa2fb2f0d424ff6fcad04f52ffb6247fcfea44d77e569b9fd26dcaa9afb1",
+          "reviewHash": "0xac70ce8ff4bd138e2aedc337c50d74fb8946f1538fbc1b38b202a225777babd1",
+          "score": 100,
+          "recommendation": 1,
+          "nonce": "1787139740353176",
+          "deadline": "1787398940"
+        },
+        "legacyMessageHash": "0xeb5f9eda41a05ef2c59915fc401a68ea01a2bbfb35608a575a6b8736e9fba4cd",
+        "legacySignature": "0x8c0b7c08be2d167e8b06a89a3364d5d9f0926ab7958899071d2396245f8d45ab140858f8fd7cd6a69884047d2b69f47e201aeb351171c1142ebd920ad7cd47f81b",
+        "createdAt": "2026-08-19T11:42:20.426Z"
+      }
+    ],
+    [
+      "order_0x504f2d3137383731343239353339353800000000000000000000000000000000",
+      {
+        "id": "ATT-1787142954107-767",
+        "orderId": "0x504f2d3137383731343239353339353800000000000000000000000000000000",
+        "reviewId": "REV-1787142954024-212",
+        "score": 100,
+        "recommendationCode": 1,
+        "nonce": "1787142954058952",
+        "deadline": "1787402154",
+        "signature": "0x695bd113e4b72e6e2019663dffe83decf4ffa2d7e1951f53177b85a48133361d10e1ebe4949cc8a11d902ae9941698682df2264b698a67514f6171dd67d3f9021c",
+        "signerAddress": "0x34090545bd562b0be1cdc855f7ca9bee4566ce51",
+        "chainId": 677,
+        "verifyingContract": "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb",
+        "attestation": {
+          "orderId": "36324920710217097493678205994408915275735992575851317376893593834843266875392",
+          "evidenceHash": "0x5e97aa2fb2f0d424ff6fcad04f52ffb6247fcfea44d77e569b9fd26dcaa9afb1",
+          "reviewHash": "0xac70ce8ff4bd138e2aedc337c50d74fb8946f1538fbc1b38b202a225777babd1",
+          "score": 100,
+          "recommendation": 1,
+          "nonce": "1787142954058952",
+          "deadline": "1787402154"
+        },
+        "legacyMessageHash": "0x6957813fca9d057408cdae8ecdfec265e0c1f7d7ea15e0d2839aee4de103e74f",
+        "legacySignature": "0xf1ff0ddfe6b19e7d247f2acfc9909fe6fe6c5f717d5b884fe30e23cfe272dcc27d35278711ecd6daf0c85860467207fdcc726a3d55fa48e9b8e522f3b91126a11c",
+        "createdAt": "2026-08-19T12:35:54.107Z"
+      }
+    ],
+    [
+      "order_0x504f2d3137383731383632383336353000000000000000000000000000000000",
+      {
+        "id": "ATT-1787186283893-713",
+        "orderId": "0x504f2d3137383731383632383336353000000000000000000000000000000000",
+        "reviewId": "REV-1787186283771-503",
+        "score": 55,
+        "recommendationCode": 3,
+        "nonce": "1787186283803654",
+        "deadline": "1787445483",
+        "signature": "0x25d244389152c5230b80fcf6ad76aedfc3dbe9fada8746aed99f970d1da72d823209dec478e096c955a9575a31f743de0ff26c82712a70310e1d07ffc145ba8c1c",
+        "signerAddress": "0x34090545bd562b0be1cdc855f7ca9bee4566ce51",
+        "chainId": 677,
+        "verifyingContract": "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb",
+        "attestation": {
+          "orderId": "36324920710217097493776666218283052544942341178716626697648960854441580298240",
+          "evidenceHash": "0x5e97aa2fb2f0d424ff6fcad04f52ffb6247fcfea44d77e569b9fd26dcaa9afb1",
+          "reviewHash": "0xac70ce8ff4bd138e2aedc337c50d74fb8946f1538fbc1b38b202a225777babd1",
+          "score": 55,
+          "recommendation": 3,
+          "nonce": "1787186283803654",
+          "deadline": "1787445483"
+        },
+        "legacyMessageHash": "0x91b28c0e175f6cee7974df1a3fd212833343fe1b4929ee5438266ad280d42586",
+        "legacySignature": "0x95bf84c06860185d2ed4104e51c0d8f1bffe0389ea7cdc5dbd7a519a2693bd232fcd279544a7a172b20faaffdd3e465f4b6c15c179f8f652fab334c55b457c5b1b",
+        "createdAt": "2026-08-20T00:38:03.894Z"
+      }
+    ]
+  ],
+  "transactions": [
+    [
+      "0x54582d544553542d313738373133393637363030340000000000000000000000",
+      {
+        "id": "TX-1787139676011-111",
+        "orderId": "0x504f2d3137383731333936373538373100000000000000000000000000000000",
+        "txHash": "0x54582d544553542d313738373133393637363030340000000000000000000000",
+        "txType": "APPROVE_RELEASE",
+        "fromAddress": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "toAddress": "0x7c87c29d5bb020de0faf3eb2b2b11c1a2fa07b88",
+        "amount": "22000",
+        "currency": "BOT",
+        "chainId": 677,
+        "blockNumber": null,
+        "gasUsed": null,
+        "status": "CONFIRMED",
+        "createdAt": "2026-08-19T11:41:16.011Z"
+      }
+    ],
+    [
+      "0x54582d544553542d313738373133393734303436350000000000000000000000",
+      {
+        "id": "TX-1787139740470-677",
+        "orderId": "0x504f2d3137383731333937343032363200000000000000000000000000000000",
+        "txHash": "0x54582d544553542d313738373133393734303436350000000000000000000000",
+        "txType": "APPROVE_RELEASE",
+        "fromAddress": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "toAddress": "0x7c87c29d5bb020de0faf3eb2b2b11c1a2fa07b88",
+        "amount": "22000",
+        "currency": "BOT",
+        "chainId": 677,
+        "blockNumber": null,
+        "gasUsed": null,
+        "status": "CONFIRMED",
+        "createdAt": "2026-08-19T11:42:20.470Z"
+      }
+    ],
+    [
+      "0x54582d544553542d313738373134323935343134360000000000000000000000",
+      {
+        "id": "TX-1787142954155-413",
+        "orderId": "0x504f2d3137383731343239353339353800000000000000000000000000000000",
+        "txHash": "0x54582d544553542d313738373134323935343134360000000000000000000000",
+        "txType": "APPROVE_RELEASE",
+        "fromAddress": "0x70997970c51812dc3a010c7d01b50e0d17dc79c8",
+        "toAddress": "0x7c87c29d5bb020de0faf3eb2b2b11c1a2fa07b88",
+        "amount": "22000",
+        "currency": "BOT",
+        "chainId": 677,
+        "blockNumber": null,
+        "gasUsed": null,
+        "status": "CONFIRMED",
+        "createdAt": "2026-08-19T12:35:54.155Z"
+      }
+    ]
+  ],
+  "disputes": []
+}

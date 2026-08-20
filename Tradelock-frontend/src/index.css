@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: #f5f3ee;
+    --surface: #ffffff;
+    --ink: #171717;
+    --muted: #686868;
+    --line: #d8d5ce;
+    --accent: #e7a52b;
+    --danger: #d83a34;
+    --success: #287a52;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv01', 'cv11';
+  }
+
+  ::selection {
+    background: #171717;
+    color: #f5f3ee;
+  }
+
+  /* Focus ring */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ink ring-offset-2 ring-offset-paper;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d8d5ce;
+    border-radius: 999px;
+    border: 2px solid #f5f3ee;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bfbab0;
+  }
+
+  /* Numbers use tabular figures by default for financial readability */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-eyebrow text-muted;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-200 select-none disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-ink text-paper px-5 py-2.5 text-sm hover:scale-95 active:scale-90;
+  }
+  .btn-accent {
+    @apply btn bg-accent text-ink px-5 py-2.5 text-sm font-semibold hover:scale-95 active:scale-90;
+  }
+  .btn-outline {
+    @apply btn border border-ink/15 bg-surface text-ink px-5 py-2.5 text-sm hover:scale-95 active:scale-90 hover:border-ink/30;
+  }
+  .btn-ghost {
+    @apply btn text-ink px-3 py-2 text-sm hover:bg-ink/5 hover:scale-95 active:scale-90;
+  }
+  .btn-danger {
+    @apply btn bg-danger text-white px-5 py-2.5 text-sm font-semibold hover:scale-95 active:scale-90;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-soft;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm text-ink placeholder:text-muted/60 transition-colors focus:border-ink/40 focus:bg-surface;
+  }
+  .label {
+    @apply block font-mono text-[11px] uppercase tracking-eyebrow text-muted mb-2;
+  }
+
+  .hairline {
+    @apply border-line;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(23, 23, 23, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(23, 23, 23, 0.04) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+}
