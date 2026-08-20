@@ -1,4 +1,5 @@
 {
+  "installCommand": "npm install --prefix Tradelock-frontend",
   "buildCommand": "npm run build --prefix Tradelock-frontend",
   "outputDirectory": "Tradelock-frontend/dist",
   "framework": "vite",

@@ -10,7 +10,9 @@
     "client": "npm --prefix client run dev",
     "build:client": "npm --prefix client run build",
     "frontend": "npm --prefix Tradelock-frontend run dev",
-    "build:frontend": "npm --prefix Tradelock-frontend run build"
+    "build:frontend": "npm --prefix Tradelock-frontend run build",
+    "build": "npm run build --prefix Tradelock-frontend",
+    "postinstall": "npm install --prefix Tradelock-frontend"
   },
   "keywords": ["botchain", "ai", "rwa", "escrow", "oracle", "ethereum", "solidity"],
   "author": "TradeLock Engineering Team",
