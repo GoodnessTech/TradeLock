@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: tradelock-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: BOTCHAIN_RPC_URL
+        value: https://rpc.botchain.ai
+      - key: BOTCHAIN_CHAIN_ID
+        value: "677"
+      - key: BOTCHAIN_EXPLORER_URL
+        value: https://scan.botchain.ai
+      - key: ESCROW_ADDRESS
+        value: "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb"
+      - key: CONTRACT_ADDRESS
+        value: "0xd77d14697bCC9D0a6DCA234b8612D3C0A5ae89eb"
+      - key: PAYMENT_TOKEN_ADDRESS
+        value: "0x0E965EAe12631A0826518e1811df9953355995fF"
+      - key: USDT_ADDRESS
+        value: "0x0E965EAe12631A0826518e1811df9953355995fF"
+      - key: TREASURY_ADDRESS
+        value: "0x34090545BD562b0bE1Cdc855F7cA9beE4566CE51"
+      - key: AI_ORACLE_ADDRESS
+        value: "0x34090545BD562b0bE1Cdc855F7cA9beE4566CE51"
+      - key: AI_SIGNER_ADDRESS
+        value: "0x34090545BD562b0bE1Cdc855F7cA9beE4566CE51"
+      - key: ORACLE_PRIVATE_KEY
+        value: "0x5ac3ff20f8fa774cb8fc973412744b40c12404ba6301edea066491f6e3d364aa"
+      - key: AI_PROVIDER
+        value: DETERMINISTIC
