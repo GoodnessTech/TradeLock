@@ -74,7 +74,7 @@ export function useCreateOrder() {
 
   const create = useCallback(
     async (input: CreateTradeInput) => {
-      setStatus({ state: 'WALLET_CONFIRMATION', message: 'Preparing purchase order…' });
+      setStatus({ state: 'WALLET_CONFIRMATION', message: 'Preparing property transaction…' });
       try {
         const trade = await provider.createTrade({
           product: input.product,
@@ -88,12 +88,12 @@ export function useCreateOrder() {
           amount: input.amount,
           tokenSymbol: input.tokenSymbol,
         });
-        setStatus({ state: 'SUCCESS', message: 'Purchase order created.' });
+        setStatus({ state: 'SUCCESS', message: 'Protected property transaction created.' });
         return trade;
       } catch (e) {
         setStatus({
           state: 'FAILURE',
-          error: e instanceof Error ? e.message : 'Could not create the order.',
+          error: e instanceof Error ? e.message : 'Could not create property transaction.',
         });
         throw e;
       }

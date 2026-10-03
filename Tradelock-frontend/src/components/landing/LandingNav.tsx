@@ -7,10 +7,10 @@ import { cn } from '@/lib/cn';
 
 const NAV = [
   { label: 'Properties', href: '/properties', isRoute: true },
-  { label: 'Product', href: '/#product' },
+  { label: 'Console', href: '/#product' },
   { label: 'How it works', href: '/#how' },
   { label: 'For Buyers', href: '/#buyers' },
-  { label: 'For Suppliers', href: '/#suppliers' },
+  { label: 'For Sellers', href: '/#sellers' },
   { label: 'Security', href: '/#security' },
 ];
 

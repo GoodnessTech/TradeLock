@@ -25,8 +25,8 @@ export default function ReleasePage() {
   if (!trade) {
     return (
       <div className="mx-auto max-w-2xl">
-        <p className="text-sm text-muted">Trade not found.</p>
-        <Link to="/app/trades" className="btn-primary mt-4">Back to trades</Link>
+        <p className="text-sm text-muted">Transaction not found.</p>
+        <Link to="/app/trades" className="btn-primary mt-4">Back to transactions</Link>
       </div>
     );
   }
@@ -39,17 +39,17 @@ export default function ReleasePage() {
           <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-success-ghost">
             <Check className="h-7 w-7 text-success-600" />
           </span>
-          <h2 className="mt-4 text-xl font-bold text-ink">Funds Released</h2>
-          <p className="mt-2 text-sm text-muted">The supplier has been paid on {BOT_CHAIN.name}.</p>
+          <h2 className="mt-4 text-xl font-bold text-ink">Settlement Authorized</h2>
+          <p className="mt-2 text-sm text-muted">Escrow funds have been released to the property seller on {BOT_CHAIN.name}.</p>
 
           <div className="mt-6 rounded-xl border border-line-soft bg-paper p-5 text-left">
             <div className="space-y-2.5 text-sm">
               <div className="flex justify-between">
-                <span className="text-muted">Trade</span>
+                <span className="text-muted">Transaction</span>
                 <code className="font-mono text-ink">{trade.reference}</code>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted">Supplier receives</span>
+                <span className="text-muted">Seller receives</span>
                 <span className="tnum font-semibold text-success-600">{formatCurrency(netToSupplier(trade.amount))}</span>
               </div>
               {status.txHash && (
@@ -71,11 +71,11 @@ export default function ReleasePage() {
 
           <div className="mt-6 flex items-center justify-center gap-3">
             <button onClick={() => navigate(`/app/trades/${trade.id}`)} className="btn-primary">
-              View Trade
+              View Transaction
               <ArrowRight className="h-4 w-4" />
             </button>
             <button onClick={() => navigate('/app/trades')} className="btn-outline">
-              All Trades
+              All Transactions
             </button>
           </div>
         </div>
@@ -93,9 +93,9 @@ export default function ReleasePage() {
         Back
       </button>
 
-      <h1 className="text-2xl font-bold tracking-tightish text-ink">Release Funds</h1>
+      <h1 className="text-2xl font-bold tracking-tightish text-ink">Authorize Property Settlement</h1>
       <p className="mt-1 text-sm text-muted">
-        Authorize the smart contract to release escrowed funds to the supplier.
+        Authorize the smart contract to release escrowed funds to the property seller upon verified closing.
       </p>
 
       {/* Confirmation panel */}
@@ -106,14 +106,14 @@ export default function ReleasePage() {
             {trade.aiRecommendation && <RecommendationBadge recommendation={trade.aiRecommendation} />}
           </div>
           <p className="mt-1 text-sm text-muted">
-            {trade.product} · {formatCurrency(trade.amount)}
+            {trade.product} {trade.location ? `· ${trade.location}` : ''} · {formatCurrency(trade.amount)}
           </p>
         </div>
 
         <div className="px-6 py-5">
           <div className="space-y-3 text-sm">
             <div className="flex justify-between">
-              <span className="text-muted">Escrow</span>
+              <span className="text-muted">Escrow Secured</span>
               <span className="tnum font-medium text-ink">{formatCurrency(trade.amount)}</span>
             </div>
             <div className="flex justify-between">
@@ -121,7 +121,7 @@ export default function ReleasePage() {
               <span className="tnum text-ink">{formatCurrency(fee)}</span>
             </div>
             <div className="flex justify-between border-t border-line-soft pt-3">
-              <span className="font-medium text-ink">Supplier receives</span>
+              <span className="font-medium text-ink">Seller receives</span>
               <span className="tnum text-lg font-bold text-success-600">{formatCurrency(net)}</span>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function ReleasePage() {
           <div className="flex items-center gap-4 border-t border-line px-6 py-5">
             <ScoreRing value={trade.aiScore} size={80} stroke={6} />
             <div className="flex-1">
-              <p className="font-mono text-[10px] uppercase tracking-wider text-muted">AI Score</p>
+              <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Verification Confidence</p>
               <p className="mt-0.5 text-sm font-medium text-ink">
                 {trade.aiRecommendation === 'RELEASE_FUNDS' ? 'Release recommended' : 'Review recommended'}
               </p>
@@ -143,11 +143,11 @@ export default function ReleasePage() {
           </div>
         )}
 
-        {/* Supplier */}
+        {/* Seller */}
         <div className="border-t border-line px-6 py-4">
           <div className="flex items-center justify-between text-xs">
-            <span className="text-muted">Supplier</span>
-            <code className="font-mono text-ink">{shortAddress(trade.supplier.address)}</code>
+            <span className="text-muted">Property Seller</span>
+            <code className="font-mono text-ink">{shortAddress(trade.seller?.address || trade.supplier.address)}</code>
           </div>
         </div>
       </div>
@@ -156,7 +156,7 @@ export default function ReleasePage() {
       <div className="mt-4 flex items-start gap-3 rounded-xl border border-line-soft bg-paper p-4">
         <Shield className="mt-0.5 h-5 w-5 shrink-0 text-ink" />
         <p className="text-xs text-muted">
-          Your wallet will authorize the smart contract to release escrowed funds. This is an onchain transaction on {BOT_CHAIN.name}.
+          Your wallet will authorize the smart contract to release escrowed funds to the seller. This is an onchain transaction on {BOT_CHAIN.name}.
         </p>
       </div>
 
@@ -168,7 +168,7 @@ export default function ReleasePage() {
           className="btn-accent"
         >
           <Check className="h-4 w-4" />
-          Approve & Release
+          Authorize & Release Escrow
         </button>
         <button onClick={() => navigate(`/app/trades/${trade.id}`)} className="btn-ghost">
           Cancel
@@ -177,7 +177,7 @@ export default function ReleasePage() {
 
       {status.state !== 'IDLE' && (
         <div className="mt-6">
-          <TransactionStatusCard status={status} title="Releasing funds" onDismiss={reset} />
+          <TransactionStatusCard status={status} title="Releasing escrow settlement" onDismiss={reset} />
         </div>
       )}
     </div>

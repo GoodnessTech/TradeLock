@@ -40,8 +40,8 @@ export default function ReviewPage() {
   if (!trade) {
     return (
       <div className="mx-auto max-w-4xl">
-        <p className="text-sm text-muted">Trade not found.</p>
-        <Link to="/app/trades" className="btn-primary mt-4">Back to trades</Link>
+        <p className="text-sm text-muted">Transaction not found.</p>
+        <Link to="/app/trades" className="btn-primary mt-4">Back to transactions</Link>
       </div>
     );
   }
@@ -55,12 +55,12 @@ export default function ReviewPage() {
         </button>
         <div className="card p-12 text-center">
           <Brain className="mx-auto h-10 w-10 text-muted" />
-          <h2 className="mt-4 text-lg font-semibold text-ink">AI review not available</h2>
+          <h2 className="mt-4 text-lg font-semibold text-ink">Property Verification Not Available</h2>
           <p className="mt-2 text-sm text-muted">
-            The AI review will be available once evidence has been submitted and verified.
+            The multi-vector verification report will be generated once title deeds, cadastral survey, and inspection evidence are submitted.
           </p>
           <button onClick={() => navigate(`/app/trades/${trade.id}/evidence`)} className="btn-primary mt-6">
-            Submit Evidence
+            Submit Property Evidence
           </button>
         </div>
       </div>
@@ -76,12 +76,12 @@ export default function ReviewPage() {
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="eyebrow mb-2">AI Delivery Review</p>
+          <p className="eyebrow mb-2">AI Property & Deed Verification</p>
           <h1 className="text-2xl font-bold tracking-tightish text-ink">
             Verification for <span className="font-mono">{trade.reference}</span>
           </h1>
           <p className="mt-1 text-sm text-muted">
-            {formatNumber(trade.quantity)} {trade.unit} {trade.product} · {formatCurrency(trade.amount)}
+            {trade.product} {trade.location ? `· ${trade.location}` : ''} · {formatCurrency(trade.amount)}
           </p>
         </div>
         <RecommendationBadge recommendation={review.recommendation} />
@@ -100,7 +100,7 @@ export default function ReviewPage() {
         <div className="card p-6">
           <div className="flex items-center gap-2">
             <Brain className="h-4 w-4 text-accent-700" />
-            <p className="eyebrow">AI Summary</p>
+            <p className="eyebrow">Verification Summary</p>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-ink">{review.summary}</p>
 
@@ -128,7 +128,7 @@ export default function ReviewPage() {
       {/* Structured checks */}
       <div className="mt-6 card overflow-hidden">
         <div className="border-b border-line px-6 py-4">
-          <p className="eyebrow">Structured Verification</p>
+          <p className="eyebrow">Multi-Vector Deed & Inspection Checks</p>
         </div>
         <div className="divide-y divide-line-soft">
           {review.checks.map((check) => {
@@ -165,7 +165,7 @@ export default function ReviewPage() {
 
       {/* Findings */}
       <div className="mt-6 card p-6">
-        <p className="eyebrow mb-4">AI Findings</p>
+        <p className="eyebrow mb-4">Verification Findings & Observations</p>
         <ul className="space-y-2.5">
           {review.findings.map((finding) => {
             const style = FINDING_STYLES[finding.kind];
@@ -184,9 +184,9 @@ export default function ReviewPage() {
       <div className="mt-6 flex items-start gap-3 rounded-xl border border-line-soft bg-paper p-4">
         <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-ink" />
         <div>
-          <p className="text-sm font-medium text-ink">You remain in control. AI recommends. You authorize.</p>
+          <p className="text-sm font-medium text-ink">You remain in control. AI assists. You authorize.</p>
           <p className="mt-1 text-xs text-muted">
-            The AI score is a recommendation, not a guarantee. Review the evidence yourself before approving release.
+            The AI verification score analyzes document consistency and inspection reports. Human review and buyer approval govern the final release of funds.
           </p>
         </div>
       </div>
@@ -196,7 +196,7 @@ export default function ReviewPage() {
         <div className="mt-8 flex items-center gap-3">
           <button onClick={() => navigate(`/app/trades/${trade.id}/release`)} className="btn-accent">
             <ArrowRight className="h-4 w-4" />
-            Release Funds
+            Authorize Settlement
           </button>
           <button
             onClick={() => navigate(`/app/disputes?trade=${trade.id}`)}

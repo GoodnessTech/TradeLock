@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
-import { ShieldCheck, FileCheck2, Brain, Check, ArrowRight } from 'lucide-react';
+import { ShieldCheck, FileCheck2, Check, ArrowRight, Building2, UserCheck } from 'lucide-react';
 
 const STEPS = [
-  { label: 'Buyer', value: '$18,000', detail: 'Cocoa · 10,000 KG' },
-  { label: 'Escrow', value: 'Funded', detail: 'Funds locked onchain' },
-  { label: 'Delivery Evidence', value: 'Submitted', detail: '7 documents' },
-  { label: 'AI Review', value: '94 / 100', detail: 'Release recommended' },
-  { label: 'Buyer Approval', value: 'Authorized', detail: 'You remain in control' },
-  { label: 'Supplier Paid', value: '$17,820', detail: 'Settled on BOT Chain' },
+  { label: 'Buyer', value: 'Agreement Created', detail: 'Terms & inspection window agreed' },
+  { label: 'Escrow', value: '$180,000 USDT', detail: 'Funds secured in smart contract vault' },
+  { label: 'Property Verification', value: 'C of O Audited', detail: 'Cadastral beacons & title verified' },
+  { label: 'Inspection', value: 'Certified Pass', detail: 'Structural & MEP survey submitted' },
+  { label: 'Human Review', value: 'Conditions Met', detail: 'Deed conveyance conditions confirmed' },
+  { label: 'Buyer Approval', value: 'Authorized', detail: 'Buyer authorizes smart contract release' },
+  { label: 'Settlement', value: '$178,200 USDT', detail: 'Net funds released to seller onchain' },
 ];
 
 export function TradeFlowCard() {
@@ -32,23 +33,23 @@ export function TradeFlowCard() {
             <span className="h-2 w-2 rounded-full bg-success/60" />
           </div>
           <span className="font-mono text-[10px] uppercase tracking-eyebrow text-muted">
-            COCOA-2408 · Trade Flow
+            LAGOS-RES-2408 · Property Escrow Flow
           </span>
         </div>
 
-        {/* Trade summary */}
+        {/* Property summary */}
         <div className="grid grid-cols-3 divide-x divide-line border-b border-line">
           <div className="px-5 py-4">
-            <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Product</p>
-            <p className="mt-1 text-sm font-semibold text-ink">Cocoa</p>
+            <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Property</p>
+            <p className="mt-1 text-sm font-semibold text-ink truncate">Modern 3 Bed</p>
           </div>
           <div className="px-5 py-4">
-            <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Quantity</p>
-            <p className="mt-1 text-sm font-semibold tnum text-ink">10,000 KG</p>
+            <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Location</p>
+            <p className="mt-1 text-sm font-semibold text-ink truncate">Lagos, Nigeria</p>
           </div>
           <div className="px-5 py-4">
-            <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Amount</p>
-            <p className="mt-1 text-sm font-semibold tnum text-ink">$18,000</p>
+            <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Escrow Price</p>
+            <p className="mt-1 text-sm font-semibold tnum text-ink">$180,000</p>
           </div>
         </div>
 
@@ -60,7 +61,7 @@ export function TradeFlowCard() {
               const current = i === active;
               const last = i === STEPS.length - 1;
               return (
-                <li key={step.label} className="relative flex gap-4 pb-5 last:pb-0">
+                <li key={step.label} className="relative flex gap-4 pb-4 last:pb-0">
                   {!last && (
                     <span
                       className={`absolute left-[15px] top-8 h-full w-px transition-colors duration-500 ${
@@ -87,7 +88,7 @@ export function TradeFlowCard() {
                   </span>
                   <div
                     className={`flex flex-1 items-center justify-between pt-1 transition-all duration-300 ${
-                      current ? 'opacity-100' : done ? 'opacity-70' : 'opacity-40'
+                      current ? 'opacity-100' : done ? 'opacity-75' : 'opacity-40'
                     }`}
                   >
                     <div>
@@ -95,7 +96,7 @@ export function TradeFlowCard() {
                       <p className="text-xs text-muted">{step.detail}</p>
                     </div>
                     <span
-                      className={`font-mono text-sm tnum transition-colors ${
+                      className={`font-mono text-xs font-semibold tnum transition-colors ${
                         done || current ? 'text-ink' : 'text-muted'
                       }`}
                     >
@@ -108,15 +109,15 @@ export function TradeFlowCard() {
           </ol>
         </div>
 
-        {/* AI score badge */}
-        <div className="flex items-center justify-between border-t border-line bg-paper px-6 py-4">
+        {/* Real-estate protocol attestation badge */}
+        <div className="flex items-center justify-between border-t border-line bg-paper px-6 py-3.5">
           <div className="flex items-center gap-2">
-            <Brain className="h-4 w-4 text-accent-700" />
-            <span className="font-mono text-[10px] uppercase tracking-wider text-muted">AI Verification</span>
+            <Building2 className="h-4 w-4 text-accent-700" />
+            <span className="font-mono text-[10px] uppercase tracking-wider text-muted">Title Deed & Cadastral Audit</span>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-xs text-muted">Score</span>
-            <span className="tnum text-lg font-bold text-ink">94<span className="text-muted text-sm">/100</span></span>
+          <div className="flex items-center gap-1.5">
+            <UserCheck className="h-3.5 w-3.5 text-success" />
+            <span className="font-mono text-xs font-semibold text-ink">Verified Freehold</span>
           </div>
         </div>
 
@@ -124,19 +125,22 @@ export function TradeFlowCard() {
         <div className="flex items-center justify-between bg-ink px-6 py-3.5 text-paper">
           <span className="flex items-center gap-2 text-sm font-medium">
             <ShieldCheck className="h-4 w-4 text-accent" />
-            Release Recommended
+            Protected Onchain Settlement
           </span>
           <ArrowRight className="h-4 w-4 text-paper/60" />
         </div>
       </div>
 
-      {/* Floating doc card */}
-      <div className="absolute -bottom-6 -left-6 hidden w-48 rotate-[-4deg] rounded-xl border border-line bg-surface p-3 shadow-card animate-fade-up sm:block" style={{ animationDelay: '0.6s' }}>
+      {/* Floating real-estate deed card */}
+      <div
+        className="absolute -bottom-6 -left-6 hidden w-52 rotate-[-4deg] rounded-xl border border-line bg-surface p-3.5 shadow-card animate-fade-up sm:block"
+        style={{ animationDelay: '0.6s' }}
+      >
         <div className="flex items-center gap-2">
           <FileCheck2 className="h-4 w-4 text-success-600" />
-          <span className="font-mono text-[10px] uppercase tracking-wider text-muted">Bill of Lading</span>
+          <span className="font-mono text-[10px] uppercase tracking-wider text-muted">Title Deed (C of O)</span>
         </div>
-        <p className="mt-1.5 text-xs text-ink">Verified · 10,000 KG</p>
+        <p className="mt-1 text-xs font-semibold text-ink">BK-4091 · 240 sqm Verified</p>
       </div>
     </div>
   );

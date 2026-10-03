@@ -101,30 +101,30 @@ function mapBackendReviewToAIReview(review: BackendAIReview, tradeId: string): A
   const checks: AICheck[] = [
     {
       id: 'c1',
-      label: 'Quantity Verification',
+      label: 'Cadastral Survey & Area Verification',
       result: review.quantityMatch === 'MATCH' ? 'MATCH' : review.quantityMatch === 'MISMATCH' ? 'MISMATCH' : 'PARTIAL',
-      detail: review.quantityMatch === 'MATCH' ? 'Declared cargo quantity matches bill of lading and packing list.' : 'Discrepancy detected in cargo quantity.',
+      detail: review.quantityMatch === 'MATCH' ? 'Declared property dimensions and survey beacons match cadastral record.' : 'Discrepancy detected in boundary or square meter area.',
       confidence: 99,
     },
     {
       id: 'c2',
-      label: 'Delivery Window & Timeline',
+      label: 'Closing Window & Settlement Timeline',
       result: review.dateMatch === 'MATCH' ? 'MATCH' : 'PARTIAL',
-      detail: review.dateMatch === 'MATCH' ? 'Shipment arrival date complies with purchase order schedule.' : 'Shipment arrival date needs review.',
+      detail: review.dateMatch === 'MATCH' ? 'Conveyance and inspection completed within agreed transaction window.' : 'Transaction closing timeline needs review.',
       confidence: 97,
     },
     {
       id: 'c3',
-      label: 'Document Integrity & Consistency',
+      label: 'Title Deed & Registry Consistency',
       result: review.documentConsistency === 'MATCH' ? 'MATCH' : 'PARTIAL',
-      detail: review.documentConsistency === 'MATCH' ? 'Cross-document verification validated with zero tampering.' : 'Document cross-reference flagged minor variance.',
+      detail: review.documentConsistency === 'MATCH' ? 'Deed of Assignment and C of O validated against land registry hash.' : 'Document cross-reference flagged minor registry variance.',
       confidence: 98,
     },
     {
       id: 'c4',
-      label: 'Cargo Condition Assessment',
+      label: 'Structural Inspection Assessment',
       result: review.conditionAssessment === 'PASS' ? 'MATCH' : 'MISMATCH',
-      detail: review.conditionAssessment === 'PASS' ? 'Visual and inspection report parameters met quality threshold.' : 'Quality parameters below target grade.',
+      detail: review.conditionAssessment === 'PASS' ? 'Physical inspection report and habitation parameters passed engineering thresholds.' : 'Inspection report flagged maintenance items.',
       confidence: 94,
     },
   ];
@@ -140,9 +140,9 @@ function mapBackendReviewToAIReview(review: BackendAIReview, tradeId: string): A
     }
   } else {
     findings.push(
-      { id: 'f1', kind: 'POSITIVE', text: 'All shipping manifests match purchase order specifications.' },
-      { id: 'f2', kind: 'POSITIVE', text: 'Seal numbers and cargo weights verified across documentation.' },
-      { id: 'f3', kind: 'POSITIVE', text: 'Origin and destination port certifications match contract terms.' },
+      { id: 'f1', kind: 'POSITIVE', text: 'All property deed records match agreed transaction terms.' },
+      { id: 'f2', kind: 'POSITIVE', text: 'Cadastral survey beacons and deed of assignment verified.' },
+      { id: 'f3', kind: 'POSITIVE', text: 'Seller ownership history and land registry status confirmed.' },
     );
   }
 
@@ -153,7 +153,7 @@ function mapBackendReviewToAIReview(review: BackendAIReview, tradeId: string): A
     recommendation: rec,
     checks,
     findings,
-    summary: review.summary || 'AI multi-vector analysis completed. Evidence bundle verified against purchase order.',
+    summary: review.summary || 'AI multi-vector analysis completed. Property evidence bundle verified against purchase agreement.',
     reviewedAt: review.reviewedAt || new Date().toISOString(),
     modelVersion: review.aiProvider ? `tradelock-${review.aiProvider.toLowerCase()}-v1` : 'tradelock-verifier-v1',
     signature: review.reviewHash || undefined,
@@ -283,7 +283,7 @@ export const BlockchainTradeDataProvider: TradeDataProvider = {
       const deadlineTimestamp = Math.floor(new Date(trade.deliveryDeadline).getTime() / 1000) || Math.floor(Date.now() / 1000) + 86400 * 14;
       const destinationHash = ethers.keccak256(ethers.toUtf8Bytes(trade.destination || 'DESTINATION'));
       const orderRefHash = ethers.keccak256(ethers.toUtf8Bytes(trade.reference || 'PO-REF'));
-      const requirementsHash = ethers.keccak256(ethers.toUtf8Bytes('STANDARD_CARGO_INSPECTION_V1'));
+      const requirementsHash = ethers.keccak256(ethers.toUtf8Bytes('STANDARD_REAL_ESTATE_INSPECTION_V1'));
 
       const params = {
         supplier: trade.supplier.address,
@@ -421,35 +421,35 @@ export const BlockchainTradeDataProvider: TradeDataProvider = {
           checks: [
             {
               id: 'c1',
-              label: 'Quantity Verification',
+              label: 'Cadastral Survey & Area',
               result: 'MATCH',
-              detail: 'Declared cargo quantity verified with bill of lading.',
+              detail: 'Declared property dimensions verified with cadastral survey.',
               confidence: 99,
             },
             {
               id: 'c2',
-              label: 'Delivery Window',
+              label: 'Closing Window',
               result: 'MATCH',
-              detail: 'Cargo delivered within agreed purchase order window.',
+              detail: 'Property conveyance completed within agreed purchase window.',
               confidence: 98,
             },
             {
               id: 'c3',
               label: 'Document Consistency',
               result: 'MATCH',
-              detail: 'Zero cross-document anomalies detected.',
+              detail: 'Zero cross-document anomalies detected in ownership records.',
               confidence: 97,
             },
             {
               id: 'c4',
-              label: 'Condition & Quality',
+              label: 'Structural Condition & Inspection',
               result: 'MATCH',
-              detail: 'Passed all commodity inspection parameters.',
+              detail: 'Passed all structural engineering and inspection parameters.',
               confidence: 95,
             },
           ],
           findings: [
-            { id: 'f1', kind: 'POSITIVE', text: 'All delivery criteria successfully verified.' },
+            { id: 'f1', kind: 'POSITIVE', text: 'All property deed and closing criteria successfully verified.' },
           ],
           summary: 'AI verification completed with high confidence. Release recommended.',
           reviewedAt: order.reviewedAt || new Date().toISOString(),
@@ -576,7 +576,7 @@ export const BlockchainTradeDataProvider: TradeDataProvider = {
           tradeId: o.id,
           tradeReference: o.rawId || o.title || o.id.slice(0, 10),
           reason: 'DOCUMENT_INCONSISTENCY',
-          description: `Discrepancy detected in cargo shipment for ${o.commodity || o.title}. Escrow locked.`,
+          description: `Discrepancy detected in title or property verification for ${o.commodity || o.title}. Escrow locked.`,
           openedBy: o.buyerAddress,
           openedAt: o.disputedAt || o.updatedAt || new Date().toISOString(),
           status: 'OPEN',

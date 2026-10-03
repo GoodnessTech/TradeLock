@@ -13,3 +13,5 @@ export function useWalletContext() {
   if (!ctx) throw new Error('useWalletContext must be used within WalletProvider');
   return ctx;
 }
+
+export { useWalletContext as useWallet };

@@ -44,6 +44,8 @@ export function netToSupplier(amount: number): number {
   return amount - feeAmount(amount);
 }
 
+export const netToSeller = netToSupplier;
+
 export function explorerTxUrl(txHash: string): string {
   if (!txHash) return BOT_CHAIN.explorerUrl;
   return `${BOT_CHAIN.explorerUrl}/tx/${txHash}`;

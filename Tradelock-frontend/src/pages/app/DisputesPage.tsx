@@ -44,7 +44,7 @@ export default function DisputesPage() {
         <div>
           <h1 className="text-2xl font-bold tracking-tightish text-ink">Disputes</h1>
           <p className="mt-1 text-sm text-muted">
-            Raise a dispute when evidence doesn't match the agreed terms. Funds remain locked until resolution.
+            Raise a dispute when property documents, structural survey, or closing conditions fail to match agreed terms. Funds remain secured in escrow until resolution.
           </p>
         </div>
         {!showForm && !success && (
@@ -65,15 +65,15 @@ export default function DisputesPage() {
 
           <h2 className="text-lg font-semibold text-ink">Raise a Dispute</h2>
           <p className="mt-1 text-sm text-muted">
-            This will flag the trade and keep funds locked in escrow until the issue is resolved.
+            This will flag the property transaction and keep funds locked in escrow until the issue is resolved.
           </p>
 
           <div className="mt-6 space-y-5">
-            <Field label="Trade" htmlFor="tradeId" hint="The trade reference this dispute concerns.">
+            <Field label="Transaction" htmlFor="tradeId" hint="The property transaction reference this dispute concerns.">
               <input
                 id="tradeId"
                 className="input font-mono text-sm"
-                placeholder="Trade ID or reference"
+                placeholder="Transaction ID or reference"
                 value={tradeId}
                 onChange={(e) => setTradeId(e.target.value)}
               />
@@ -85,7 +85,7 @@ export default function DisputesPage() {
                   <span className="text-muted">{trade.reference}</span>
                   <span className="tnum font-medium text-ink">{formatCurrency(trade.amount)}</span>
                 </div>
-                <p className="mt-1 text-xs text-muted">{trade.product} · Supplier {shortAddress(trade.supplier.address)}</p>
+                <p className="mt-1 text-xs text-muted">{trade.product} · Seller {shortAddress(trade.seller?.address || trade.supplier.address)}</p>
               </div>
             )}
 
@@ -97,7 +97,7 @@ export default function DisputesPage() {
               <textarea
                 id="description"
                 className="input min-h-[100px] resize-none"
-                placeholder="Explain what went wrong with the delivery…"
+                placeholder="Explain what went wrong with the title deed, structural inspection, or closing terms…"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
@@ -133,13 +133,13 @@ export default function DisputesPage() {
             <AlertTriangle className="h-7 w-7 text-danger-600" />
           </span>
           <h2 className="mt-4 text-xl font-bold text-ink">Dispute Opened</h2>
-          <p className="mt-2 text-sm text-muted">Funds remain locked. The trade is now under dispute review.</p>
+          <p className="mt-2 text-sm text-muted">Funds remain locked. The property transaction is now under dispute review.</p>
           <div className="mt-6 flex items-center justify-center gap-3">
             <button onClick={() => { reset(); setShowForm(false); }} className="btn-outline">
               Done
             </button>
             <Link to="/app/trades" className="btn-primary">
-              View Trades
+              View Transactions
             </Link>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function DisputesPage() {
           <div className="h-32 animate-pulse rounded-2xl border border-line bg-surface" />
         ) : disputes.length === 0 ? (
           <div className="rounded-2xl border border-line bg-surface p-12 text-center">
-            <p className="text-sm text-muted">No disputes. Active trades are proceeding normally.</p>
+            <p className="text-sm text-muted">No disputes. Active property transactions are proceeding normally.</p>
           </div>
         ) : (
           <div className="space-y-3">

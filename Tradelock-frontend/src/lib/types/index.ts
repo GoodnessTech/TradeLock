@@ -12,18 +12,17 @@ export type TradeStatus =
 export type AIRecommendation = 'RELEASE_FUNDS' | 'REQUEST_REVIEW' | 'FLAG_DISPUTE';
 
 export type ProductCategory =
-  | 'Agriculture'
-  | 'Commodities'
-  | 'Manufactured Goods'
-  | 'Raw Materials'
-  | 'Electronics'
-  | 'Textiles'
-  | 'Food & Beverage'
-  | 'Energy'
   | 'Real Estate'
+  | 'Residential'
+  | 'Commercial'
+  | 'Land'
+  | 'Villa'
+  | 'Penthouse'
+  | 'Terrace'
+  | 'Apartment'
   | 'Other';
 
-export type Unit = 'KG' | 'TONS' | 'LBS' | 'UNITS' | 'LITERS' | 'BARRELS' | 'BOXES' | 'PALLETS';
+export type Unit = 'UNITS' | 'SQM' | 'SQFT' | 'PLOTS' | 'ACRES' | 'HECTARES' | 'KG' | 'TONS';
 
 export interface Party {
   address: string;
@@ -38,9 +37,10 @@ export interface Trade {
   quantity: number;
   unit: Unit;
   destination: string;
-  deliveryDeadline: string; // ISO date
+  deliveryDeadline: string; // ISO date (Closing Deadline)
   buyer: Party;
-  supplier: Party;
+  supplier: Party; // preserved for contract mapping (represents Seller)
+  seller?: Party; // real-estate alias
   amount: number;
   tokenSymbol: string;
   feeBps: number;
@@ -59,15 +59,23 @@ export interface Trade {
   aiConfidence?: number;
   aiRecommendation?: AIRecommendation;
   description?: string;
+  propertyType?: string;
+  inspectionWindowDays?: number;
 }
 
 export type EvidenceType =
+  | 'TITLE_DEED'
+  | 'CADASTRAL_SURVEY'
+  | 'INSPECTION_REPORT'
+  | 'BUILDING_PERMIT'
+  | 'PROPERTY_PHOTO'
+  | 'CLOSING_STATEMENT'
+  | 'TAX_CLEARANCE'
   | 'BILL_OF_LADING'
   | 'PACKING_LIST'
   | 'DELIVERY_PHOTO'
   | 'TRACKING_REFERENCE'
   | 'CERTIFICATE_OF_ORIGIN'
-  | 'INSPECTION_REPORT'
   | 'INVOICE'
   | 'OTHER';
 
@@ -120,6 +128,10 @@ export interface AIReview {
 }
 
 export type DisputeReason =
+  | 'TITLE_INCONSISTENCY'
+  | 'INSPECTION_DEFECT'
+  | 'CLOSING_DELAY'
+  | 'DOCUMENT_DEFECT'
   | 'QUANTITY_MISMATCH'
   | 'DAMAGED_GOODS'
   | 'LATE_DELIVERY'
@@ -164,16 +176,19 @@ export interface WalletState {
 }
 
 export interface CreateTradeInput {
-  product: string;
+  product: string; // Property title
   category: ProductCategory;
   quantity: number;
   unit: Unit;
-  destination: string;
-  deliveryDeadline: string;
+  destination: string; // Location
+  deliveryDeadline: string; // Closing date
   description?: string;
-  supplierAddress: string;
-  amount: number;
+  supplierAddress: string; // Seller EVM address
+  sellerAddress?: string;
+  amount: number; // Purchase / Escrow price
   tokenSymbol: string;
+  propertyType?: string;
+  inspectionWindow?: number;
 }
 
 export const STATUS_ORDER: TradeStatus[] = [
@@ -186,53 +201,62 @@ export const STATUS_ORDER: TradeStatus[] = [
 ];
 
 export const STATUS_LABELS: Record<TradeStatus, string> = {
-  CREATED: 'Order Created',
-  FUNDED: 'Escrow Funded',
-  EVIDENCE_SUBMITTED: 'Evidence Submitted',
+  CREATED: 'Agreement Created',
+  FUNDED: 'Escrow Secured',
+  EVIDENCE_SUBMITTED: 'Documents & Inspection Submitted',
   UNDER_REVIEW: 'Under Review',
-  RELEASE_PENDING: 'Release Pending',
+  RELEASE_PENDING: 'Buyer Approval Pending',
   DISPUTED: 'Disputed',
-  RELEASED: 'Funds Released',
-  REFUNDED: 'Refunded',
+  RELEASED: 'Funds Settled to Seller',
+  REFUNDED: 'Refunded to Buyer',
   CANCELLED: 'Cancelled',
 };
 
 export const RECOMMENDATION_LABELS: Record<AIRecommendation, string> = {
-  RELEASE_FUNDS: 'Release Funds',
-  REQUEST_REVIEW: 'Request Review',
-  FLAG_DISPUTE: 'Flag Dispute',
+  RELEASE_FUNDS: 'Approve Settlement',
+  REQUEST_REVIEW: 'Request Human Review',
+  FLAG_DISPUTE: 'Flag Title / Defect Issue',
 };
 
 export const EVIDENCE_TYPE_LABELS: Record<EvidenceType, string> = {
-  BILL_OF_LADING: 'Bill of Lading',
-  PACKING_LIST: 'Packing List',
-  DELIVERY_PHOTO: 'Delivery Photo',
-  TRACKING_REFERENCE: 'Tracking Reference',
-  CERTIFICATE_OF_ORIGIN: 'Certificate of Origin',
-  INSPECTION_REPORT: 'Inspection Report',
-  INVOICE: 'Invoice',
-  OTHER: 'Other Document',
+  TITLE_DEED: 'Deed of Assignment / Title Deed',
+  CADASTRAL_SURVEY: 'Cadastral Survey Plan & Coordinates',
+  INSPECTION_REPORT: 'Certified Property Inspection Report',
+  BUILDING_PERMIT: 'Building Approval / Certificate of Occupancy',
+  PROPERTY_PHOTO: 'Property Condition & Handover Photos',
+  CLOSING_STATEMENT: 'Closing Settlement Statement',
+  TAX_CLEARANCE: 'Tax Clearance & Ground Rent Receipts',
+  BILL_OF_LADING: 'Deed of Assignment / Title Conveyance',
+  PACKING_LIST: 'Property Specification & Inventory Pack',
+  DELIVERY_PHOTO: 'On-site Inspection & As-built Photos',
+  TRACKING_REFERENCE: 'Registry / Cadastral Beacon Reference',
+  CERTIFICATE_OF_ORIGIN: 'Survey & Zoning Certificate',
+  INVOICE: 'Purchase Agreement & Valuation Invoice',
+  OTHER: 'Other Property Document',
 };
 
 export const DISPUTE_REASON_LABELS: Record<DisputeReason, string> = {
-  QUANTITY_MISMATCH: 'Quantity mismatch',
-  DAMAGED_GOODS: 'Damaged goods',
-  LATE_DELIVERY: 'Late delivery',
-  DOCUMENT_INCONSISTENCY: 'Document inconsistency',
-  OTHER: 'Other',
+  TITLE_INCONSISTENCY: 'Title deed or boundary inconsistency',
+  INSPECTION_DEFECT: 'Unresolved structural / MEP defect',
+  CLOSING_DELAY: 'Closing deadline exceeded',
+  DOCUMENT_DEFECT: 'Missing legal or cadastral documentation',
+  QUANTITY_MISMATCH: 'Boundary or area mismatch',
+  DAMAGED_GOODS: 'Inspection condition failure',
+  LATE_DELIVERY: 'Delayed closing / handover',
+  DOCUMENT_INCONSISTENCY: 'Document or deed inconsistency',
+  OTHER: 'Other property dispute',
 };
 
-export const UNIT_OPTIONS: Unit[] = ['KG', 'TONS', 'LBS', 'UNITS', 'LITERS', 'BARRELS', 'BOXES', 'PALLETS'];
+export const UNIT_OPTIONS: Unit[] = ['UNITS', 'SQM', 'SQFT', 'PLOTS', 'ACRES', 'HECTARES'];
 
 export const CATEGORY_OPTIONS: ProductCategory[] = [
   'Real Estate',
-  'Agriculture',
-  'Commodities',
-  'Manufactured Goods',
-  'Raw Materials',
-  'Electronics',
-  'Textiles',
-  'Food & Beverage',
-  'Energy',
+  'Residential',
+  'Villa',
+  'Penthouse',
+  'Terrace',
+  'Commercial',
+  'Land',
+  'Apartment',
   'Other',
 ];

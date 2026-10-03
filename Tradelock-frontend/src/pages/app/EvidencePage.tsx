@@ -7,16 +7,15 @@ import {
   Image as ImageIcon,
   X,
   Check,
-  Package,
   Hash,
   ArrowRight,
   Brain,
+  ShieldCheck,
 } from 'lucide-react';
 import { useTrade, useSubmitEvidence } from '@/hooks/useTrades';
 import { TransactionStatusCard } from '@/components/ui/TransactionStatusCard';
 import { Select, Field } from '@/components/ui/Select';
 import { formatFileSize, formatDate } from '@/lib/format';
-import { shortAddress } from '@/lib/botchain';
 import type { EvidenceFile, EvidenceType } from '@/lib/types';
 import { EVIDENCE_TYPE_LABELS } from '@/lib/types';
 import { cn } from '@/lib/cn';
@@ -48,7 +47,7 @@ export default function EvidencePage() {
         continue;
       }
       const ext = file.name.split('.').pop()?.toLowerCase();
-      const type: EvidenceType = ext === 'pdf' ? 'BILL_OF_LADING' : 'DELIVERY_PHOTO';
+      const type: EvidenceType = ext === 'pdf' ? 'TITLE_DEED' : 'PROPERTY_PHOTO';
       newFiles.push({
         id: Math.random().toString(36).slice(2),
         type,
@@ -98,8 +97,8 @@ export default function EvidencePage() {
   if (!trade) {
     return (
       <div className="mx-auto max-w-3xl">
-        <p className="text-sm text-muted">Trade not found.</p>
-        <Link to="/app/trades" className="btn-primary mt-4">Back to trades</Link>
+        <p className="text-sm text-muted">Transaction not found.</p>
+        <Link to="/app/trades" className="btn-primary mt-4">Back to transactions</Link>
       </div>
     );
   }
@@ -112,15 +111,15 @@ export default function EvidencePage() {
           <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-success-ghost">
             <Check className="h-7 w-7 text-success-600" />
           </span>
-          <h2 className="mt-4 text-xl font-bold text-ink">Evidence Submitted</h2>
+          <h2 className="mt-4 text-xl font-bold text-ink">Property Evidence Package Submitted</h2>
           <p className="mt-2 text-sm text-muted">
-            {files.length} {files.length === 1 ? 'document' : 'documents'} submitted for AI review.
+            {files.length} {files.length === 1 ? 'document' : 'documents'} submitted for deed audit and transaction condition verification.
           </p>
 
           <div className="mt-6 rounded-xl border border-line-soft bg-paper p-5 text-left">
             <div className="flex items-center justify-between">
               <span className="flex items-center gap-2 text-xs text-muted">
-                <Hash className="h-3.5 w-3.5" /> Evidence Package Hash
+                <Hash className="h-3.5 w-3.5" /> Evidence Package Onchain Hash
               </span>
             </div>
             <code className="mt-2 block break-all font-mono text-[11px] text-ink">{hash}</code>
@@ -129,10 +128,10 @@ export default function EvidencePage() {
           <div className="mt-6 flex items-center justify-center gap-3">
             <button onClick={() => navigate(`/app/trades/${trade.id}/review`)} className="btn-accent">
               <Brain className="h-4 w-4" />
-              View AI Review
+              View Verification Review
             </button>
             <button onClick={() => navigate(`/app/trades/${trade.id}`)} className="btn-outline">
-              Back to trade
+              Back to Transaction
             </button>
           </div>
         </div>
@@ -147,23 +146,23 @@ export default function EvidencePage() {
         Back
       </button>
 
-      <h1 className="text-2xl font-bold tracking-tightish text-ink">Submit Delivery Evidence</h1>
+      <h1 className="text-2xl font-bold tracking-tightish text-ink">Submit Property Documentation & Evidence</h1>
       <p className="mt-1 text-sm text-muted">
-        For trade <code className="font-mono text-ink">{trade.reference}</code> — upload documents and photos for AI verification.
+        For property transaction <code className="font-mono text-ink">{trade.reference}</code> — upload title deeds, cadastral survey plans, structural inspection reports, and photos.
       </p>
 
-      {/* Trade summary */}
+      {/* Property summary */}
       <div className="mt-6 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-line bg-line">
         <div className="bg-surface px-4 py-3">
-          <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Product</p>
-          <p className="mt-1 text-sm font-medium text-ink">{trade.product}</p>
+          <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Property</p>
+          <p className="mt-1 text-sm font-semibold text-ink truncate">{trade.product}</p>
         </div>
         <div className="bg-surface px-4 py-3">
-          <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Quantity</p>
-          <p className="mt-1 text-sm font-medium tnum text-ink">{trade.quantity.toLocaleString()} {trade.unit}</p>
+          <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Location</p>
+          <p className="mt-1 text-sm font-medium text-ink truncate">{trade.destination}</p>
         </div>
         <div className="bg-surface px-4 py-3">
-          <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Deadline</p>
+          <p className="font-mono text-[10px] uppercase tracking-wider text-muted">Closing Deadline</p>
           <p className="mt-1 text-sm font-medium text-ink">{formatDate(trade.deliveryDeadline)}</p>
         </div>
       </div>
@@ -188,7 +187,7 @@ export default function EvidencePage() {
           onChange={(e) => addFiles(e.target.files)}
         />
         <UploadCloud className={cn('mx-auto h-10 w-10', dragOver ? 'text-accent-700' : 'text-muted')} />
-        <p className="mt-3 text-sm font-medium text-ink">Drag and drop files here</p>
+        <p className="mt-3 text-sm font-medium text-ink">Drag and drop property documents here</p>
         <p className="mt-1 text-xs text-muted">PDF, PNG, JPG, WEBP — up to 10 MB each</p>
         <button type="button" className="btn-outline mt-4 text-xs">Browse files</button>
       </div>
@@ -198,7 +197,7 @@ export default function EvidencePage() {
       {/* File list */}
       {files.length > 0 && (
         <div className="mt-6 space-y-2">
-          <p className="eyebrow">Uploaded ({files.length})</p>
+          <p className="eyebrow">Uploaded Documents ({files.length})</p>
           {files.map((file) => {
             const isPdf = file.mimeType === 'application/pdf';
             return (
@@ -229,22 +228,22 @@ export default function EvidencePage() {
         </div>
       )}
 
-      {/* Tracking + notes */}
+      {/* Cadastral ref + notes */}
       <div className="mt-6 grid gap-5 sm:grid-cols-2">
-        <Field label="Tracking Reference (optional)" htmlFor="tracking">
+        <Field label="Cadastral / Land Registry Beacon Reference" htmlFor="tracking">
           <input
             id="tracking"
-            className="input"
-            placeholder="e.g. MAERSK-7781-44029"
+            className="input font-mono text-sm"
+            placeholder="e.g. SURV/LAG/2023/1109-B or C-OF-O-8841"
             value={trackingRef}
             onChange={(e) => setTrackingRef(e.target.value)}
           />
         </Field>
-        <Field label="Notes (optional)" htmlFor="notes">
+        <Field label="Closing Notes & Disclosures (optional)" htmlFor="notes">
           <input
             id="notes"
             className="input"
-            placeholder="Additional context for the reviewer"
+            placeholder="Survey remarks, deed transfer notes, inspection notes…"
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
           />
@@ -255,7 +254,7 @@ export default function EvidencePage() {
       <div className="mt-8 flex items-center gap-3">
         <button onClick={handleSubmit} disabled={files.length === 0 || status.state === 'WALLET_CONFIRMATION'} className="btn-accent">
           <Brain className="h-4 w-4" />
-          Submit for AI Review
+          Submit for Verification Audit
           <ArrowRight className="h-4 w-4" />
         </button>
         <span className="text-xs text-muted">
@@ -265,7 +264,7 @@ export default function EvidencePage() {
 
       {status.state !== 'IDLE' && (
         <div className="mt-6">
-          <TransactionStatusCard status={status} title="Submitting evidence" onDismiss={reset} />
+          <TransactionStatusCard status={status} title="Submitting evidence pack" onDismiss={reset} />
         </div>
       )}
     </div>

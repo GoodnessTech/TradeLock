@@ -10,17 +10,18 @@ export function LandingFooter() {
           <div>
             <LogoLockup mark="h-8 w-8 text-ink" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              Trade without blind trust. AI-powered verification and programmable escrow for real-world commerce.
+              Real estate, secured from offer to ownership. Onchain title verification and programmable escrow for property transactions.
             </p>
           </div>
 
           <div>
-            <p className="eyebrow mb-4">Product</p>
+            <p className="eyebrow mb-4">Platform</p>
             <ul className="space-y-2.5 text-sm">
+              <li><Link to="/properties" className="text-muted hover:text-ink">Properties</Link></li>
               <li><a href="#how" className="text-muted hover:text-ink">How it works</a></li>
-              <li><a href="#product" className="text-muted hover:text-ink">Trade Console</a></li>
-              <li><a href="#security" className="text-muted hover:text-ink">Security</a></li>
-              <li><Link to="/app" className="text-muted hover:text-ink">Open app</Link></li>
+              <li><a href="#product" className="text-muted hover:text-ink">Transaction Console</a></li>
+              <li><a href="#security" className="text-muted hover:text-ink">Trust & Security</a></li>
+              <li><Link to="/app" className="text-muted hover:text-ink">Open Console</Link></li>
             </ul>
           </div>
 

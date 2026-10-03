@@ -62,12 +62,12 @@ export const MockTradeDataProvider: TradeDataProvider = {
   },
   async getEvidence(tradeId) {
     await delay(200);
-    if (tradeId === 't-2408' || tradeId === 'COCOA-2408') return MOCK_EVIDENCE;
+    if (tradeId === 't-2408' || tradeId === 'LAGOS-RES-2408') return MOCK_EVIDENCE;
     return null;
   },
   async getAIReview(tradeId) {
     await delay(300);
-    if (tradeId === 't-2408' || tradeId === 'COCOA-2408') return MOCK_AI_REVIEW;
+    if (tradeId === 't-2408' || tradeId === 'LAGOS-RES-2408') return MOCK_AI_REVIEW;
     const t = MOCK_TRADES.find((x) => x.id === tradeId);
     if (t && t.aiScore) {
       return {
