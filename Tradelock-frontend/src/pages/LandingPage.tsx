@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, FileCheck2, Brain, Lock, Scale, Zap, Eye } from 'lucide-react';
+import { ArrowRight, ShieldCheck, FileCheck2, Brain, Lock, Scale, Zap, Eye, Building2 } from 'lucide-react';
 import { LandingNav } from '@/components/landing/LandingNav';
 import { LandingFooter } from '@/components/landing/LandingFooter';
 import { TradeFlowCard } from '@/components/landing/TradeFlowCard';
+import { FeaturedPropertiesSection } from '@/components/landing/FeaturedPropertiesSection';
 import { BOT_CHAIN, PROTOCOL_FEE_BPS } from '@/lib/botchain';
 
 export default function LandingPage() {
@@ -17,23 +18,23 @@ export default function LandingPage() {
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_1fr]">
               <div className="animate-fade-up">
-                <p className="eyebrow mb-6">Onchain Trade Infrastructure</p>
+                <p className="eyebrow mb-6">Onchain Real Estate & Trade Escrow</p>
                 <h1 className="text-display font-bold tracking-tighter2 text-ink">
                   Trade without
                   <br />
                   <span className="italic font-serif font-normal">blind trust.</span>
                 </h1>
                 <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
-                  AI-powered verification and programmable escrow for real-world commerce.
+                  Deed-audited real estate discovery and AI-powered programmable escrow for high-value commerce.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-3">
-                  <Link to="/app/trades/new" className="btn-primary px-6 py-3 text-base">
-                    Start a Trade
+                  <Link to="/properties" className="btn-primary px-6 py-3 text-base">
+                    Browse Properties
                     <ArrowRight className="h-4 w-4" />
                   </Link>
-                  <a href="#how" className="btn-outline px-6 py-3 text-base">
-                    See how it works
-                  </a>
+                  <Link to="/app/trades/new" className="btn-outline px-6 py-3 text-base">
+                    Start a Trade
+                  </Link>
                 </div>
                 <div className="mt-10 flex items-center gap-6 font-mono text-[11px] uppercase tracking-wider text-muted">
                   <span className="flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-success-600" /> Escrow-protected</span>
@@ -78,6 +79,9 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/* FEATURED PROPERTIES DISCOVERY */}
+        <FeaturedPropertiesSection />
 
         {/* PRODUCT PREVIEW */}
         <section id="product" className="border-t border-line bg-ink py-24 text-paper">

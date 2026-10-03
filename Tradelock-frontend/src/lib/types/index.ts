@@ -20,6 +20,7 @@ export type ProductCategory =
   | 'Textiles'
   | 'Food & Beverage'
   | 'Energy'
+  | 'Real Estate'
   | 'Other';
 
 export type Unit = 'KG' | 'TONS' | 'LBS' | 'UNITS' | 'LITERS' | 'BARRELS' | 'BOXES' | 'PALLETS';
@@ -224,6 +225,7 @@ export const DISPUTE_REASON_LABELS: Record<DisputeReason, string> = {
 export const UNIT_OPTIONS: Unit[] = ['KG', 'TONS', 'LBS', 'UNITS', 'LITERS', 'BARRELS', 'BOXES', 'PALLETS'];
 
 export const CATEGORY_OPTIONS: ProductCategory[] = [
+  'Real Estate',
   'Agriculture',
   'Commodities',
   'Manufactured Goods',

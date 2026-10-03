@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Check, Lock } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation, useSearchParams, Link } from 'react-router-dom';
+import { ArrowLeft, ArrowRight, Check, Lock, Building2, ShieldCheck } from 'lucide-react';
 import { Field, Select } from '@/components/ui/Select';
 import { TransactionStatusCard } from '@/components/ui/TransactionStatusCard';
 import { useCreateOrder, useFundEscrow } from '@/hooks/useTrades';
@@ -8,29 +8,73 @@ import { feeAmount, netToSupplier, shortAddress } from '@/lib/botchain';
 import { formatCurrency } from '@/lib/format';
 import type { CreateTradeInput, ProductCategory, Unit } from '@/lib/types';
 import { CATEGORY_OPTIONS, UNIT_OPTIONS } from '@/lib/types';
+import { getPropertyById } from '@/lib/data/properties';
+import type { Property } from '@/lib/types/property';
 import { cn } from '@/lib/cn';
 
 const STEPS = ['Trade Details', 'Supplier', 'Payment', 'Review'] as const;
 
 export default function NewTrade() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
   const { create: createOrder, status: createStatus, reset: resetCreate } = useCreateOrder();
   const { fund: fundEscrow, status: fundStatus, reset: resetFund } = useFundEscrow();
   const [step, setStep] = useState(0);
   const [createdTradeId, setCreatedTradeId] = useState<string | null>(null);
 
-  const [form, setForm] = useState<CreateTradeInput>({
-    product: '',
-    category: 'Agriculture',
-    quantity: 0,
-    unit: 'KG',
-    destination: '',
-    deliveryDeadline: '',
-    description: '',
-    supplierAddress: '',
-    amount: 0,
-    tokenSymbol: 'USDT',
+  // Check for linked property
+  const propIdFromParam = searchParams.get('propertyId');
+  const propertyFromState = (location.state as { property?: Property } | null)?.property;
+  const linkedProperty = propertyFromState || (propIdFromParam ? getPropertyById(propIdFromParam) : null);
+
+  const [form, setForm] = useState<CreateTradeInput>(() => {
+    if (linkedProperty) {
+      const futureDate = new Date(Date.now() + 30 * 86400 * 1000).toISOString().split('T')[0];
+      return {
+        product: linkedProperty.title,
+        category: 'Real Estate',
+        quantity: 1,
+        unit: 'UNITS',
+        destination: linkedProperty.location,
+        deliveryDeadline: futureDate,
+        description: `Property Title Escrow: ${linkedProperty.title} (${linkedProperty.location}). Cadastral Survey: ${linkedProperty.verification.cadastralSurveyNumber}. Title Deed: ${linkedProperty.verification.titleDeedType}. Gated smart escrow settlement.`,
+        supplierAddress: linkedProperty.seller.address,
+        amount: linkedProperty.price,
+        tokenSymbol: linkedProperty.tokenSymbol || 'USDT',
+      };
+    }
+    return {
+      product: '',
+      category: 'Agriculture',
+      quantity: 0,
+      unit: 'KG',
+      destination: '',
+      deliveryDeadline: '',
+      description: '',
+      supplierAddress: '',
+      amount: 0,
+      tokenSymbol: 'USDT',
+    };
   });
+
+  useEffect(() => {
+    if (linkedProperty && !form.product) {
+      const futureDate = new Date(Date.now() + 30 * 86400 * 1000).toISOString().split('T')[0];
+      setForm({
+        product: linkedProperty.title,
+        category: 'Real Estate',
+        quantity: 1,
+        unit: 'UNITS',
+        destination: linkedProperty.location,
+        deliveryDeadline: futureDate,
+        description: `Property Title Escrow: ${linkedProperty.title} (${linkedProperty.location}). Cadastral Survey: ${linkedProperty.verification.cadastralSurveyNumber}. Title Deed: ${linkedProperty.verification.titleDeedType}. Gated smart escrow settlement.`,
+        supplierAddress: linkedProperty.seller.address,
+        amount: linkedProperty.price,
+        tokenSymbol: linkedProperty.tokenSymbol || 'USDT',
+      });
+    }
+  }, [linkedProperty]);
 
   const update = (patch: Partial<CreateTradeInput>) => setForm((f) => ({ ...f, ...patch }));
 
@@ -80,6 +124,36 @@ export default function NewTrade() {
 
       <h1 className="text-2xl font-bold tracking-tightish text-ink">Create Purchase Order</h1>
       <p className="mt-1 text-sm text-muted">Set up a protected trade in four steps.</p>
+
+      {/* Linked Property Banner */}
+      {linkedProperty && !createdTradeId && (
+        <div className="mt-5 flex items-center justify-between rounded-2xl border border-success/30 bg-success-ghost/70 p-4 animate-fade-in">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface border border-line text-success">
+              <Building2 className="h-5 w-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-success-600 font-semibold">
+                  Protected Property Escrow
+                </span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-surface px-2 py-0.5 text-[10px] font-semibold text-success border border-line">
+                  <ShieldCheck className="h-3 w-3" /> TradeLock Verified
+                </span>
+              </div>
+              <p className="text-sm font-bold text-ink">{linkedProperty.title}</p>
+              <p className="text-xs text-muted">{linkedProperty.location} · {formatCurrency(linkedProperty.price)} {linkedProperty.tokenSymbol}</p>
+            </div>
+          </div>
+          <Link
+            to={`/properties/${linkedProperty.id}`}
+            className="btn-outline text-xs px-3 py-1.5 hidden sm:inline-flex"
+            target="_blank"
+          >
+            View Listing
+          </Link>
+        </div>
+      )}
 
       {/* Stepper */}
       {!createdTradeId && (

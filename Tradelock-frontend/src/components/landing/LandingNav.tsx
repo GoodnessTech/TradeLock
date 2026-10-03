@@ -6,11 +6,12 @@ import { WalletButton } from '@/components/ui/WalletButton';
 import { cn } from '@/lib/cn';
 
 const NAV = [
-  { label: 'Product', href: '#product' },
-  { label: 'How it works', href: '#how' },
-  { label: 'For Buyers', href: '#buyers' },
-  { label: 'For Suppliers', href: '#suppliers' },
-  { label: 'Security', href: '#security' },
+  { label: 'Properties', href: '/properties', isRoute: true },
+  { label: 'Product', href: '/#product' },
+  { label: 'How it works', href: '/#how' },
+  { label: 'For Buyers', href: '/#buyers' },
+  { label: 'For Suppliers', href: '/#suppliers' },
+  { label: 'Security', href: '/#security' },
 ];
 
 export function LandingNav() {
@@ -37,15 +38,25 @@ export function LandingNav() {
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
-          {NAV.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm text-muted transition-colors hover:text-ink"
-            >
-              {item.label}
-            </a>
-          ))}
+          {NAV.map((item) =>
+            item.isRoute ? (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="text-sm font-medium text-ink transition-colors hover:text-ink-600"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted transition-colors hover:text-ink"
+              >
+                {item.label}
+              </a>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-3">
@@ -63,16 +74,27 @@ export function LandingNav() {
       {mobileOpen && (
         <div className="border-t border-line bg-paper lg:hidden animate-fade-in">
           <nav className="flex flex-col px-5 py-3">
-            {NAV.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="py-3 text-sm text-ink border-b border-line-soft last:border-0"
-              >
-                {item.label}
-              </a>
-            ))}
+            {NAV.map((item) =>
+              item.isRoute ? (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="py-3 text-sm font-medium text-ink border-b border-line-soft last:border-0"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="py-3 text-sm text-ink border-b border-line-soft last:border-0"
+                >
+                  {item.label}
+                </a>
+              ),
+            )}
           </nav>
         </div>
       )}

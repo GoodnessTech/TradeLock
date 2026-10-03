@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { TradeDataProvider } from '@/lib/contracts/TradeDataContext';
 import { WalletProvider } from '@/hooks/WalletContext';
 import LandingPage from '@/pages/LandingPage';
+import PropertiesPage from '@/pages/PropertiesPage';
+import PropertyDetailPage from '@/pages/PropertyDetailPage';
 import AppLayout from '@/layouts/AppLayout';
 import Dashboard from '@/pages/app/Dashboard';
 import TradesList from '@/pages/app/TradesList';
@@ -21,8 +23,12 @@ export default function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/properties" element={<PropertiesPage inAppLayout={false} />} />
+            <Route path="/properties/:id" element={<PropertyDetailPage inAppLayout={false} />} />
             <Route path="/app" element={<AppLayout />}>
               <Route index element={<Dashboard />} />
+              <Route path="properties" element={<PropertiesPage inAppLayout={true} />} />
+              <Route path="properties/:id" element={<PropertyDetailPage inAppLayout={true} />} />
               <Route path="trades" element={<TradesList />} />
               <Route path="trades/new" element={<NewTrade />} />
               <Route path="trades/:id" element={<TradeDetail />} />

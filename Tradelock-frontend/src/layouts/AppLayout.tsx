@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
+  Building2,
   ArrowLeftRight,
   FilePlus2,
   Lock,
@@ -20,6 +21,7 @@ import { cn } from '@/lib/cn';
 
 const NAV_ITEMS = [
   { to: '/app', label: 'Overview', icon: LayoutDashboard, end: true },
+  { to: '/app/properties', label: 'Properties', icon: Building2 },
   { to: '/app/trades', label: 'Trades', icon: ArrowLeftRight },
   { to: '/app/trades/new', label: 'Purchase Orders', icon: FilePlus2 },
   { to: '/app/trades', label: 'Escrow', icon: Lock, matchSearch: 'fund' },
@@ -166,6 +168,7 @@ export default function AppLayout() {
 
 function getPageName(path: string): string {
   if (path === '/app') return 'Overview';
+  if (path.includes('/properties')) return 'Properties';
   if (path.includes('/new')) return 'New Trade';
   if (path.includes('/evidence')) return 'Evidence';
   if (path.includes('/review')) return 'AI Review';
